@@ -4,7 +4,7 @@ This document helps us structure our research
 
 ## Reading list
 
-See README
+See [README](README.md)
 
 ## Deployment scenarios
 
