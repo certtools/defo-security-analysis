@@ -32,6 +32,10 @@ Per scenario, list all possible attack possibilities and if possible how to miti
 * As a hoster I will deploy ECH for ... I need to do 1 2 3
 * 
 
+## Game-theoretic considerations
+
+If I have work with it, if I risk breaking it, and I don't have a direct benefit myself (but just protect the client's client hello), then what is my benefit? Why should I do it?
+
 ## Global scenario considerations
 
 ## Remaining metadata
