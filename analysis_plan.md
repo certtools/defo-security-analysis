@@ -20,10 +20,17 @@ List of possible deployment scenarios:
 **Question**: what is the distribution number of domains / host? What if we remove the CDNs? How does that look like? What is the effort for the smaller hosts (hosters) vs. benefit for them?
 Does ECH pay off for them? If not, it will not be widely deployed in these scenarios.
 
+**Question**: which scenarios does Stephen see?
 
 ### Attacks / security considerations per deployment scenario
 
-XXX per scenario, list all possible attack possibilities and if possible how to mitigate them/counter them.
+Per scenario, list all possible attack possibilities and if possible how to mitigate them/counter them.
+
+**Example:**
+
+* As a univeristy, I will deploy ECH for ... I need to do: 1 2 3...
+* As a hoster I will deploy ECH for ... I need to do 1 2 3
+* 
 
 ## Global scenario considerations
 
