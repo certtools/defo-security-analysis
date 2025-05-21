@@ -2,19 +2,24 @@
 
 This document helps us structure our research
 
-## Reading liset
+## Reading list
 
-See XXX
+See README
 
 ## Deployment scenarios
 
-XXX
+For small and medium scale operators
+
+Find any possible pit traps
 
 ### Attacks / security considerations per deployment scenario
 
 XXX per scenario, list all possible attack possibilities and if possible how to mitigate them/counter them.
 
 ## Global scenario considerations
+
+## Remaining metadata
+review the metadata in a properly functioning ECH interaction and explore remaining avenues for de-anonymisation, filtering, blocking and censorship.
 
 ### .RU case ...
 
@@ -23,7 +28,9 @@ XXX per scenario, list all possible attack possibilities and if possible how to 
 
 "The Russian internet regulator also recommended local website owners switch to domestic CDN services"
 
-### other ways to block ECHConfig in DNS?
+### other ways to block ECH Config
+
+#### DNS
 
 Is there something like certificate pinning?
 

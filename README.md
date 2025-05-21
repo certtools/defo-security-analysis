@@ -26,3 +26,4 @@ This task will accumulate practical documentation (for deployers) and analyses c
 - Interop report: https://github.com/defo-project/ech-interop-report
 - Test page: https://test.defo.ie/
 - Build: https://github.com/defo-project#user-content-builderci-status-for-repos
+- Russa blocking ESNI/ECH: https://therecord.media/russia-blocks-thousands-of-websites-that-use-cloudflare-service
