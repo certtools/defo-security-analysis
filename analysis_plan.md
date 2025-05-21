@@ -4,7 +4,7 @@ This document helps us structure our research
 
 ## Reading list
 
-See [README](README.md)
+See [README.md](https://github.com/certtools/defo-security-analysis/blob/main/README.md#reading-material)
 
 ## Deployment scenarios
 
