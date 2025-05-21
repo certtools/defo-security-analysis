@@ -36,4 +36,8 @@ Is there something like certificate pinning?
 
 ### Other downgrade attacks?
 
-## 
+## Other de-anonymization techniques based on correlating data sets
+* pDNS
+* clustering of ECHConfig servers + fingerprinting traffic patterns (timing, packet sizes, etc.). See also Blake Andersson's talk at DeepSec vienna
+  * https://blogs.cisco.com/security/tls-fingerprinting-in-the-real-world
+  * https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption 
