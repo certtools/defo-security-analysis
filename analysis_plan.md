@@ -8,9 +8,18 @@ See [README.md](https://github.com/certtools/defo-security-analysis/blob/main/RE
 
 ## Deployment scenarios
 
-For small and medium scale operators
+We will analyse small and medium scale operators and try to identify possible traps for misconfiguring and map out residual privacy leaks in such scenarios.
+Where possible, we will recommend mitigation strategies.
 
-Find any possible pit traps
+Split mode is out of scope of this document, since it will mostly be used by very large setups (such as CDNs).
+
+List of possible deployment scenarios:
+* small to medium sized website hoster (world4you.com, Hetzner, ...)
+* universities, NRENs
+
+**Question**: what is the distribution number of domains / host? What if we remove the CDNs? How does that look like? What is the effort for the smaller hosts (hosters) vs. benefit for them?
+Does ECH pay off for them? If not, it will not be widely deployed in these scenarios.
+
 
 ### Attacks / security considerations per deployment scenario
 
