@@ -15,7 +15,7 @@ This task will accumulate practical documentation (for deployers) and analyses c
 - RFC: https://datatracker.ietf.org/doc/draft-ietf-tls-esni/
 - Well known for ECH (wkech): https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech
 - Implementation details openssl: https://github.com/sftcd/openssl/blob/ECH-draft-13c/doc/designs/ech-api.md
-- well-known for publishing ESNIKeys: https://github.com/sftcd/wkesni
+- well-known for publishing ECH Keys: https://github.com/sftcd/wkesni (IETF Draft and Zone Factory scripts)
 - Client Docker Image: https://github.com/defo-project/docker-defo-client
 - Dev Utils: https://github.com/defo-project/ech-dev-utils
 - Interop report: https://github.com/defo-project/ech-interop-report
