@@ -31,9 +31,9 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 ## Table of contents
 
-[Overview what we are going to analyse](analysis_plan.md)
-[clients](Clients.md) - 
-[Weaknesses in ECH in combination with WKECH](wkech-considerations.md)
+- [Overview what we are going to analyse](analysis_plan.md)
+- [Clients](Clients.md) - 
+- [Weaknesses in ECH in combination with WKECH](wkech-considerations.md)
 
 
 # Questions to Stephen
