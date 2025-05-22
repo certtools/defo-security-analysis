@@ -26,3 +26,18 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 # Attack ideas
 <img width="2096" alt="Breaking ECH" src="https://github.com/user-attachments/assets/5330cf54-1f4f-4c06-8479-5ed390aade46" />
+
+# Report 
+
+Table of contents
+
+
+# Questions to Stephen
+* can we get data on the distribution (shared and/or split mode) of host-/domain names per IP?
+* how easy is it to deploy for SMEs?
+* what are the incentives for SMEs to deploy it?
+* what are the risks for ...?
+* will new (ECH enabled) hostnames show up in CTLs?
+* who scans for wkech?
+
+  
