@@ -3,13 +3,6 @@ Security analysis of the defo2 project + HOWTO for web admins
 
 
 ## Deliverable text
-### Old deliverable 9.x
-
-Task (9) Deployment Scenarios Analysis and Outreach: Now that ECH is becoming available, the contractor can aim for scenarios that encrypt all the client-originated connections needed to visit an HTTPS service. There are many variations in how ECH can be deployed and the varying relationships between the client and server entities involved. There therefore remains a need to map out residual privacy leaks in such scenarios and how to plug those, given the existence of additional privacy mechanisms such as Qname Minimization, Oblivious DNS-over-HTTPS, and MASQUE. In split-mode deployments there is also the issue of privacy leaks from traffic between front-end and back-end. This task will accumulate practical documentation (for deployers) and analyses covering these issues. Those can inform trials, standardisation and implementation, provisioning and management tools. This task will run for the full duration of the project building documentation in different formats over time, perhaps initially a git
-repository or wiki pages with later reports and possibly some Internet-drafts along the way. It is clear ECH reduces metadata leakage, but it is not yet clear how censors might react. This task will audit and review the metadata in a properly functioning ECH interaction and explore remaining avenues for filtering and censorship. This includes all relevant protocols required in an ECH setup: DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), OCSP (Online Certificate Status Protocol), certificate revocation list (CRLs), etc. The contractor will also focus on “medium scale” web sites such as found on a University campus or NREN member organisation – CDNs already see the benefits of ECH and have a clear path to deployment, but it is important to enable smaller, but still significant, scale organizations to enjoy the benefits of ECH.
-
-
-### Update text proposal for 9.X
 
 Deployment Scenarios Analysis:  there are many variations in how ECH can be deployed and the varying relationships between the client and server entities involved. There therefore remains a need to map out residual privacy leaks in such scenarios and how to plug those, given the existence of additional privacy mechanisms such as Qname Minimization, Oblivious DNS-over-HTTPS, and MASQUE.
 
