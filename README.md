@@ -25,4 +25,4 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 
 # Attack ideas
-<img width="2096" alt="Breaking ECH" src="https://github.com/user-attachments/assets/07b5a2a2-bfbc-4da2-aab1-ea243d0ced83" />
+<img width="2096" alt="Breaking ECH" src="https://github.com/user-attachments/assets/5330cf54-1f4f-4c06-8479-5ed390aade46" />
