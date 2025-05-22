@@ -29,7 +29,11 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 # Report 
 
-Table of contents
+## Table of contents
+
+[Overview what we are going to analyse](analysis_plan.md)
+[clients](Clients.md) - 
+[Weaknesses in ECH in combination with WKECH](wkech-considerations.md)
 
 
 # Questions to Stephen
@@ -39,5 +43,7 @@ Table of contents
 * what are the risks for ...?
 * will new (ECH enabled) hostnames show up in CTLs?
 * who scans for wkech?
+* Doesnt' ECH (given the risks , non-existing benefits for SMEs, etc.) simply help centralization towards the CDNs / the big ones?
+* Why does Tor not want to adopt DoH? --> research their reasoning and what does that mean for privacy of ECH?
 
   
