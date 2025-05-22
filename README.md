@@ -45,5 +45,5 @@ This task will accumulate practical documentation (for deployers) and analyses c
 * who scans for wkech?
 * Doesnt' ECH (given the risks , non-existing benefits for SMEs, etc.) simply help centralization towards the CDNs / the big ones?
 * Why does Tor not want to adopt DoH? --> research their reasoning and what does that mean for privacy of ECH?
-
+* if the web is still decentralized (as in [Hoang, et. al. (2020). The web is still small after more than a decade](https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade), and iff the majority of deployments are in shared mode, then we can easily cluster , right? What's the purpose of ECH then?
   
