@@ -58,6 +58,7 @@ Is there something like certificate pinning?
 
 ## Other de-anonymization techniques based on correlating data sets
 * pDNS
+* https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade
 * clustering of ECHConfig servers + fingerprinting traffic patterns (timing, packet sizes, etc.). See also Blake Andersson's talk at DeepSec vienna
   * https://blogs.cisco.com/security/tls-fingerprinting-in-the-real-world
   * https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption 

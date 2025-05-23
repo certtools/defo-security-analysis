@@ -1,5 +1,13 @@
 # Deployment considerations
 
+## Webserver configuration
+
+- Which component creates the ECH keys with the correct parameters?
+- Which component rotates them, and reloads the webserver?
+- and creates (or serves) the wkech directory, ensuring that only the pubkeys are exposed, not the private keys
+- Triggering the ZF after every rotation (running separately, on another host)
+- Where is the documentation for the webserver?
+
 ## Complexity of configuering the ZF
 
 The ZF needs to know 

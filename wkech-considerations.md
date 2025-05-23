@@ -1,6 +1,6 @@
 # .well-known considerations 
 
-This chapter analyzes potential security concerns of [draft-ietf-tls-wketch](https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech).
+This chapter analyzes potential security concerns of [draft-ietf-tls-wkech](https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech).
 
 ## Maturity of the solution
 
