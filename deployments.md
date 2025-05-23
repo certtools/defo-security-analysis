@@ -6,7 +6,7 @@
 - Which component rotates them, and reloads the webserver?
 - and creates (or serves) the wkech directory, ensuring that only the pubkeys are exposed, not the private keys
 - Triggering the ZF after every rotation (running separately, on another host)
-- Where is the documentation for the webserver?
+- documentation: https://github.com/defo-project/ech-dev-utils#user-content-server-details
 
 ## Complexity of configuering the ZF
 
