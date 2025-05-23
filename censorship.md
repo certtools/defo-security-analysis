@@ -2,7 +2,10 @@
 ## RU
 
 ## CN
-
+- Not blocking ECH currently
+- Do they need to block ECH at all?
+	- Do they control the clients?
+	- Do they need to block anything because they have other means (Social Credits)?
 ## KR
 
 - Blocking by SNI:
