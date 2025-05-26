@@ -1,0 +1,27 @@
+site_name:  DEfO security analysis (task 9.x) report
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Deployments: deployments.md
+  - Weaknesses: 
+      - Complexity: weaknesses/complexity.md
+      - WKECH: weaknesses/wkech.md
+      - DoH/DOT: weaknesses/dependency_on_doh.md
+      - Others: weaknesses/others.md
+  - Clients considerations: 
+    - Browsers: clients/browsers.md
+    - IoT and Libraries: clients/iot_and_libs.md
+    - Tor: clients/tor.md
+  - Attacks: 
+    - via metadata: attacks/metadata.md
+    - via correlations: attacks/correlations.md
+    - via legal means: attacks/legal.md
+  - Other considerations: misc.md
+  - References: references.md
+
+
+theme: readthedocs
+
+
+

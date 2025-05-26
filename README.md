@@ -29,6 +29,16 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 # Report 
 
+## Generating the mkdocs documentation
+
+```bash
+virtualenv --python=python3.11 venv
+source venv/bin/activate
+pip install -r requirements.txt
+cd report
+mkdocs serve
+```
+
 ## Table of contents
 
 - [Overview what we are going to analyse](analysis_plan.md)
@@ -47,3 +57,4 @@ This task will accumulate practical documentation (for deployers) and analyses c
 * Why does Tor not want to adopt DoH? --> research their reasoning and what does that mean for privacy of ECH?
 * if the web is still decentralized (as in [Hoang, et. al. (2020). The web is still small after more than a decade](https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade), and iff the majority of deployments are in shared mode, then we can easily cluster , right? What's the purpose of ECH then?
   
+
