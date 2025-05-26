@@ -4,7 +4,9 @@ nav:
   - Home: index.md
   - About: about.md
   - Deployment considerations:
-      - Overview: deployments.md
+      - Overview: deployment/overview.md
+      - Incentives: deployment/incentives.md
+      - Separation issues: deployment/separation.md
   - Weaknesses: 
       - Complexity: weaknesses/complexity.md
       - WKECH: weaknesses/wkech.md

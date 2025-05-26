@@ -1,10 +1,13 @@
 # Deployment considerations
 
-This section addresses ECH deployment considerations. Where relevant, it will link to subsquent sections which details possible attacks against the procotols.
+This section addresses ECH deployment considerations. Where relevant, it will link to subsequent sections which details possible attacks against the protocols.
 
-## Overview.
+## Process overview
 
 ![WKECH flow](wkech-flow.png)
+
+### Client process
+1. To request a 
 
 ## Webserver configuration
 
@@ -23,15 +26,7 @@ The ZF needs to know
 The ZDF needs write access to the zone file and needs to be able to reload the nameserver. 
 All of this flow is non-trivial for a sysadmin to configure. 
 
-This sections looks at what could go wrong in case of mis-configurations or malicious attacks.
+This sections looks at what could go wrong in case of misconfigurations or malicious attacks.
 
 ...
-
-### Network separations
-
-### Process separations
-
-### Organsiational separations
-
-
 
