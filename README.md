@@ -25,7 +25,7 @@ This task will accumulate practical documentation (for deployers) and analyses c
 
 
 # Attack ideas
-<img width="2096" alt="Breaking ECH" src="https://github.com/user-attachments/assets/5330cf54-1f4f-4c06-8479-5ed390aade46" />
+![Mindmap](mindmap.png)
 
 # Report 
 
