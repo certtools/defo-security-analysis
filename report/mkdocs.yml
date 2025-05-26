@@ -3,7 +3,8 @@ site_name:  DEfO security analysis (task 9.x) report
 nav:
   - Home: index.md
   - About: about.md
-  - Deployments: deployments.md
+  - Deployment considerations:
+      - Overview: deployments.md
   - Weaknesses: 
       - Complexity: weaknesses/complexity.md
       - WKECH: weaknesses/wkech.md
@@ -13,12 +14,14 @@ nav:
       - Browsers: clients/browsers.md
       - IoT and Libraries: clients/iot_and_libs.md
       - Tor: clients/tor.md
-  - Censorship and Blocking: censorship.md
+  - Censorship and Blocking:
+      - Censorship and Blocking: censorship.md
   - De-anonymization attacks: 
       - via metadata: attacks/metadata.md
       - via correlations: attacks/correlations.md
       - via legal means: attacks/legal.md
-  - Other considerations: misc.md
+  - Other considerations:
+      - Other considerations: misc.md
   - References: references.md
 
 
