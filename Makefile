@@ -3,4 +3,4 @@
 .PHONY: docs
 
 docs:
-	mkdocs build -f report/mkdocs.yml
+	mkdocs build

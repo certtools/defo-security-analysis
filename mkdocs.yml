@@ -1,5 +1,8 @@
 site_name:  DEfO security analysis (task 9.x) report
 
+docs_dir: report/
+site_dir: build/
+
 nav:
   - Home: index.md
   - About: about.md
