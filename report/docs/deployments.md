@@ -4,7 +4,7 @@ This section addresses ECH deployment considerations. Where relevant, it will li
 
 ## Overview.
 
-![WKECH workflow](wkech-workflow.png)
+![WKECH flow](wkech-flow.png)
 
 ## Webserver configuration
 
