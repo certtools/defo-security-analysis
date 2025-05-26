@@ -10,14 +10,14 @@ nav:
       - DoH/DOT: weaknesses/dependency_on_doh.md
       - Others: weaknesses/others.md
   - Clients considerations: 
-    - Browsers: clients/browsers.md
-    - IoT and Libraries: clients/iot_and_libs.md
-    - Tor: clients/tor.md
+      - Browsers: clients/browsers.md
+      - IoT and Libraries: clients/iot_and_libs.md
+      - Tor: clients/tor.md
   - Censorship and Blocking: censorship.md
   - De-anonymization attacks: 
-    - via metadata: attacks/metadata.md
-    - via correlations: attacks/correlations.md
-    - via legal means: attacks/legal.md
+      - via metadata: attacks/metadata.md
+      - via correlations: attacks/correlations.md
+      - via legal means: attacks/legal.md
   - Other considerations: misc.md
   - References: references.md
 
