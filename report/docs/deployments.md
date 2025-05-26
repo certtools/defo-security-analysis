@@ -1,5 +1,11 @@
 # Deployment considerations
 
+This section addresses ECH deployment considerations. Where relevant, it will link to subsquent sections which details possible attacks against the procotols.
+
+## Overview.
+
+![WKECH workflow](wkech-workflow.png)
+
 ## Webserver configuration
 
 - Which component creates the ECH keys with the correct parameters?
