@@ -1,14 +1,18 @@
 # Censorship
+
 ## RU
 
 * Russia disallowing CDNs in order to block ECH: https://github.com/net4people/bbs/issues/417
   * https://therecord.media/russia-blocks-thousands-of-websites-that-use-cloudflare-service
   * 
+
 ## CN
+
 - Not blocking ECH currently
 - Do they need to block ECH at all?
 	- Do they control the clients?
 	- Do they need to block anything because they have other means (Social Credits)?
+
 ## KR
 
 - Blocking by SNI:

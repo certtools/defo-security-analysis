@@ -1,10 +1,10 @@
 ## Separation issues
+
 ### Network separations
 
 CFS and DNS can be in separate networks with firewall rules preventing any outgoing connection from the CFS to internal networks and for the DNS server incoming connections from CFS network ranges
+
 ### Process separations
-
-
 
 ### Organizational separations
 

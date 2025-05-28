@@ -39,6 +39,7 @@ If I have work with it, if I risk breaking it, and I don't have a direct benefit
 ## Global scenario considerations
 
 ## Remaining metadata
+
 review the metadata in a properly functioning ECH interaction and explore remaining avenues for de-anonymisation, filtering, blocking and censorship.
 
 ### .RU case ...
@@ -57,8 +58,9 @@ Is there something like certificate pinning?
 ### Other downgrade attacks?
 
 ## Other de-anonymization techniques based on correlating data sets
+
 * pDNS
 * https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade
 * clustering of ECHConfig servers + fingerprinting traffic patterns (timing, packet sizes, etc.). See also Blake Andersson's talk at DeepSec vienna
   * https://blogs.cisco.com/security/tls-fingerprinting-in-the-real-world
-  * https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption 
+  * https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption
