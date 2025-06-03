@@ -20,8 +20,8 @@ Currently, the usage of ECH is very low and thus in itself suspicious. To hide t
  Starting with February 2019, South Korea started blocking TLS-encrypted traffic to sites forbidden by the policies, most prominently pornography.
  The porn industry being blocked has therefore a business case for using ECH, enabling them to reach customers in an entire 50-million-inhabitant country.
 
-[South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021](https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/)
-[South Korea is Censoring the Internet by Snooping on SNI Traffic - Bleepingcomputer.com, February 13th, 2019](https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/)
+- [South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021](https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/)
+- [South Korea is Censoring the Internet by Snooping on SNI Traffic - Bleepingcomputer.com, Fe-bruary 13th, 2019](https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/)
 
 ## CDNs
 

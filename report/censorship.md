@@ -4,7 +4,6 @@
 
 * Russia disallowing CDNs in order to block ECH: https://github.com/net4people/bbs/issues/417
   * https://therecord.media/russia-blocks-thousands-of-websites-that-use-cloudflare-service
-  * 
 
 ## CN
 
@@ -20,4 +19,3 @@
 	- https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/
 - Workaround: VPNs and ESNI
 	- ESNI was removed from browses, ECH follows but harder to adopt
-	- 

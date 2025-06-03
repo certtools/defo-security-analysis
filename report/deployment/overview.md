@@ -10,7 +10,7 @@ This section addresses ECH deployment considerations. Where relevant, it will li
 
 I. To request a website, the browser first queries the A/AAAA record and the ECHConfig from the configured DoH/DoT server. The DoH/DoT server is either provided by the network owner or by a large CDN.
 
-II. The DoH server queries the information at the autoritative DNS server via plain DNS, managed by the website operator.
+II. The DoH server queries the information at the autoritative DNS server via DNS, managed by the website operator.
 
 II. The information is sent from the DNS server to the DoH server and potentially cached.
 
@@ -18,12 +18,14 @@ IV. The information is passed on to the client
 
 V. Using the A/AAAA record and the ECHConfig, the browser requests the website from the web server
 
+FIXME: do the DoH servers fetch their data via DNS or DoH? Protocol Upgrades?
+
 ### Server process
 
 1. The server (re-)generates the ECH keys in a defined interval (e.g. every 1 hour) for each configured domain
 2. The server publishes the public ECH keys in the WKECH directories for each domain
 3. The Zone Factory (ZF) requests the ECK keys for each configured domain in a configured interval (e.g. more often than 1 hour)
-4. The CFS answers with the ECH keys
+4. The Client-Facing Server (CFS) answers with the ECH keys
 5. The ZF pushes the generated ECHConfig to the DNS server
 
 ## Webserver configuration
@@ -45,5 +47,7 @@ The ZDF needs write access to the zone file and needs to be able to reload the n
 All of this flow is non-trivial for a sysadmin to configure and add possible steps which may break.
 
 This sections looks at what could go wrong in case of misconfigurations or malicious attacks.
+
+WKECH directory must be secured: Only public keys, not private keys
 
 ...
