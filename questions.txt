@@ -1,0 +1,47 @@
+https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech-07#section-5-7.2.2.1
+
+I dont' get that part.
+--verbose pls.
+
+"If the endpoints array has more than one element, every item SHOULD be a ServiceMode entry" ---> SHOULD or MUST?
+
+"The default value is the empty string (""), corresponding to a TargetName of "."" --> does this mean , we ECH the root of DNS?
+
+"The value is a positive integer corresponding to the SvcPriority. If omitted, the ZF MAY infer numerically increasing SvcPriority from the order of the endpoints array." 
+--> is the JSON array always ordered? What about python implementations (different versions of python did the ordering of arrays / lists differently)
+
+
+
+"The value MUST be a DNS name that could be used as the TargetName of an HTTPS resource record. This indicates that the backend is hosted on the same endpoints as this target, and is equivalent to an HTTPS AliasMode record."
+--> does this mean, we could scan the internet for WKECH sites and get the configs? Including the aliases? And make a mapping?
+
+
+https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech-07#name-zone-factory-behaviour
+"If the ZF is unable to convert the JSON into a DNS zone fragment (e.g., due to an unrecognized SvcParamKey), or if the resulting zone fails validation checks, the ZF MUST NOT update the DNS. Such failures will not be directly visible to the client-facing server, so ZF implementations will need to provide some form of reporting so that the situation can be resolved. Note that this can lead to inconsistent behavior for a single origin served by multiple ZFs"
+---> how about if we disturb this? Or if things are simply forgotten? The reporting is not specified, so ... there are going to be multiple ways and that is inconsisten.
+
+"A ZF MAY apply additional processing according to its own policy, such as adjusting TTL values and correcting common misconfigurations."
+--> not very precise.
+
+"A ZF SHOULD check that ECH with the presented endpoints succeeds with the backend before publication." -> SHOULD or MUST?
+
+"A bespoke TLS client is likely needed for this check, that does not require the ECHConfigList value to have already been published in the DNS. The TLS client also needs to allow checking for the success or failure of ECH." --> checks are not very specific again. There will be confusion and multiple levels of rigidity of checking.
+
+"If ipv4hints or ipv6hints are present, and if those are not the same values as are published in A/AAAA RRs for the backend, then the ZF SHOULD check that webPKI based authentication of the backend works at all of the relevant addresses" --> MiTM it?
+
+
+
+Question: assuming I am the ruthless autocrat of Restricted-stan and I want to 100% control my inferior subjects' internet traffic. 
+I already purchased all China could offer me. However, I have a wicked new plan:
+1. I will get a list of all "well known" recursive DNS servers (pun intended), such as 8.8.8.8 or quad-9 or any other open recusor on the net.
+2. I will block those and
+3. only operate the "child-safe" DNS recursors hosted under my juristdiction.
+4. I will make them lie about the existence of ECHConfigs / SVCB HTTP records.
+5. clients who want to contact an ECH protected site, will have to try without and downgrade to pre-ECH communication.
+6. since I log all packets, I get the host headers.
+
+win.
+
+
+
+
