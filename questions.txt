@@ -59,4 +59,12 @@ Don't we get more metadata because of DoH heartbeat?
 The bigger ones win... that's a PROBLEM.
 They have more data, this allows them to correlate.
 
+Why does Tor not use DoH? Because of centralization in DoH. 
+Centralization leads to no need for registry anymore. 
+
+How about the following: make a certificate for the IP address of the server and then use that for bootstrapping the ESNI
+
+If the encryption has a known plaintext attack , then we could precompute ... Probably not feasible....
+
+
 
