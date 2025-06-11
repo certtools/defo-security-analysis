@@ -38,6 +38,8 @@ cd report
 mkdocs serve
 ```
 
+Note well: we publish the documentation under github pages.
+
 ## Table of contents
 
 - [Overview what we are going to analyse](analysis_plan.md)
