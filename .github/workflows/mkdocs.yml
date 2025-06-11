@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: 2023 Filip Pokorný (thank you!!) Adapted by aaronkaplan
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+name: "Build and publish documentation"
+
+on:
+  push:
+    branches:
+      - publish
+
+  pull_request:
+    branches:
+      - publish
+
+
+  release:
+    types:
+      - published
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v3
+
+      - name: "Setup python"
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: "Install build dependencies"
+        run: |
+          pip install mkdocs-material mike
+
+      - name: "Build docs"
+        run: |
+          mkdocs build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'build/'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
