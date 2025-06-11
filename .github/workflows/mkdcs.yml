@@ -37,10 +37,6 @@ jobs:
           pip install mkdocs-material mike lunr pygments mkdocstrings[python] mkdocs-material mkdocs-glightbox mkdocs-redirects mkdocs-minify-plugin ruamel.yaml
 
 
-      - name: "Fix images path"
-        run: |
-          sed -i 's|docs/static/images/|static/images/|' docs/index.md
-
       - name: "Build docs without publishing"
         if: github.event_name == 'pull_request'
         run: |
