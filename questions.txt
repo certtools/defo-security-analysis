@@ -49,5 +49,8 @@ ZF <-> CFS / Backend: publishing lots of updated zone files generates lots of no
 Split mode:
 * what happens in the situation where I use a CDN for DDOS protection but keep my DNS zones myself?
 
+Idee:
+indirection point in the PTR record rein geben, dann ein forward lookup machen, dann kommt an an den key, der fuer den Split-Mode relevant ist.
+Ist das nicht besser als SVCB?
 
 
