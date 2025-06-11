@@ -43,5 +43,9 @@ I already purchased all China could offer me. However, I have a wicked new plan:
 win.
 
 
+ZF <-> CFS / Backend: publishing lots of updated zone files generates lots of notifies in DNS. Are we sure we want this?
+
+
+
 
 
