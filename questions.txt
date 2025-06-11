@@ -46,6 +46,8 @@ win.
 ZF <-> CFS / Backend: publishing lots of updated zone files generates lots of notifies in DNS. Are we sure we want this?
 
 
+Split mode:
+* what happens in the situation where I use a CDN for DDOS protection but keep my DNS zones myself?
 
 
 
