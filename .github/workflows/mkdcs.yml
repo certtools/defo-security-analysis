@@ -36,6 +36,11 @@ jobs:
         run: |
           pip install mkdocs-material mike lunr pygments mkdocstrings[python] mkdocs-material mkdocs-glightbox mkdocs-redirects mkdocs-minify-plugin ruamel.yaml
 
+      - name: "Prepare git"
+        run: |
+          git fetch origin gh-pages --depth=1
+          git config user.name defo-security-analysis-bot
+          git config user.email defo-security-analysis-bot
 
       - name: "Build docs without publishing"
         if: github.event_name == 'pull_request'
