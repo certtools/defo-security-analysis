@@ -4,21 +4,22 @@ This section addresses ECH deployment considerations. Where relevant, it will li
 
 ## Process overview
 
+This is a simplified overview of the workflow involved in the browser opening an ECH-protected website.
+
+
 ![WKECH flow](wkech-flow.png)
 
 ### Client process
 
-I. To request a website, the browser first queries the A/AAAA record and the ECHConfig from the configured DoH/DoT server. The DoH/DoT server is either provided by the network owner or by a large CDN.
+<ol>
+<li style="list-style: upper-roman;">To request a website, the browser first queries the A/AAAA record and the ECHConfig from the configured DoH/DoT server. The DoH/DoT server is either provided by the network owner or by a large CDN.</li>
+<li style="list-style: upper-roman;">The DoH server queries the information at the autoritative DNS server via DNS, managed by the website operator.</li>
+<li style="list-style: upper-roman;">The information is sent from the DNS server to the DoH server and potentially cached.</li>
+<li style="list-style: upper-roman;">The information is passed on to the client</li>
+<li style="list-style: upper-roman;">Using the A/AAAA record and the ECHConfig, the browser requests the website from the web server</li>
+</ol>
 
-II. The DoH server queries the information at the autoritative DNS server via DNS, managed by the website operator.
-
-II. The information is sent from the DNS server to the DoH server and potentially cached.
-
-IV. The information is passed on to the client
-
-V. Using the A/AAAA record and the ECHConfig, the browser requests the website from the web server
-
-FIXME: do the DoH servers fetch their data via DNS or DoH? Protocol Upgrades?
+The DoH servers query the autoritative DNS servers mostly via traditional unencrypted UDP-based DNS (Do53), however DoT and DoH are increasingly adopted in this area too. Protocol upgrades (opportunistic or via SVCB records) are also used.
 
 ### Server process
 
