@@ -6,6 +6,10 @@ CFS and DNS can be in separate networks with firewall rules preventing any outgo
 
 ### Process separations
 
+In large organisations we often observe that different teams are responible for different tasks. ECH deployments require that at least the team for DNS (ZF) and the team responsible for hosting services talk to each other. We are not commenting on how often this might be a problem.
+
+In addition, some organisations have to deal with IT security reuglation standards (ISO certification, NIS2 law in Europe), might might impact the way how ECH is being deployed (which team does what, documents what, etc.). Since deployments of ECH pose new questions, we can't yet fully assess the impact of regulations on deployements. However, it is worth keeping an eye on so that future revisions of the ECH drafts can be deployed easier for organisations facing tight regulations.
+
 ### Organizational separations
 
 In the same way as a lot of IT services are outsources (web, e-mail, etc.) DNS Servers may be operated by third parties, e.g. a registrar, a DDoS protector etc. Thus, there is no direct access via SSH to the server administration, but rather via websites and APIs.

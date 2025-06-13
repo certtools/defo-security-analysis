@@ -1,3 +1,6 @@
+The web server **MUST** ensure that `.well-known/origin-svcb` is well protected.
+The web server **MUST** ensure that `.well-known/origin-svcb` does not contain any private keys.
+
 ## Attacks against syncing the ZF with the CFS / backend
 
 If we look at the (at the time of writing this report) most current version of the [WKECH Draft](https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech-07), then we can identify a couple of weaknesses in the interplay between WKECH and ECH:

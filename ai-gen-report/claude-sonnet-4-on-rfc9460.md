@@ -39,9 +39,9 @@ example.com. IN HTTPS 1 . ech="ATTACKER_CONTROLLED_KEY"
 **Severity: High**
 
 **Attack Vector:**
-- Network intermediaries selectively drop SVCB/HTTPS queries
+- Network intermediaries selectively drop SVCB/HTTPS queries or connections to DoH/DoT servers
 - Clients fall back to cleartext SNI when ECH configuration unavailable
-- As noted in draft-ietf-tls-esni-24: "an active attacker could mount a downgrade attack by denying the user access to the SvcParams"
+- As noted in RFC9460: "[an active attacker could mount a downgrade attack by denying the user access to the SvcParams](../RFC-drafts/rfc9460.txt)"
 
 **Technical Details:**
 From the specification:
@@ -114,7 +114,7 @@ From draft-ietf-tls-wkech-07:
 **Attack Vector:**
 - ECH only provides privacy within servers sharing same configuration
 - Traffic analysis can identify target with probability 1/K where K is anonymity set size
-- Timing, packet size, and flow characteristics leak information
+- Timing, packet size, and flow characteristics might leak information
 
 **Technical Details:**
 From draft-ietf-tls-svcb-ech-07:

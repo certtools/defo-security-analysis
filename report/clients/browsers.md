@@ -23,7 +23,7 @@ SOCKS, HTTPS
 Downloaded via HTTP but signed by the CA
 Blocking the access to the lists is possible with packet inspection due to the traffic being unencrypted
 Browser soft-fail by default
-OCSP is dead: https://letsencrypt.org/2022/09/07/new-life-for-crls/
+OCSP is dead: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>
 Work ongoing to fix these issues
 
 ### QUIC and SPDY
