@@ -5,6 +5,6 @@ TOR’s architecture is designed to enhance security and privacy, which mitigate
 Contrary to Do53 and DoH, TOR employs an alternative approach, utilizing DNS over the TOR network and subsequently through the exit node.
 TOR inherently addresses the concerns that both DoH and ECH aim to resolve, particularly through its TOR onion services.
 
-- Detailed explanation on TOR's non-usage of DoH can be found here: https://lists.torproject.org/mailman3/hyperkitty/list/tor-dev@lists.torproject.org/thread/6GDO7CYEFIKID7QQCRVYVFNIVETWWWWY/#6ZBFGNSRPWRCEO7PVPSHHVLAOGF7KN3C
-- Discussion on DNS over HTTPS (DoH) in TOR: https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753
-- Discussion on Encrypted ClientHello (ECH) in TOR: https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144
+- Detailed explanation on TOR's non-usage of DoH can be found here: <https://lists.torproject.org/mailman3/hyperkitty/list/tor-dev@lists.torproject.org/thread/6GDO7CYEFIKID7QQCRVYVFNIVETWWWWY/#6ZBFGNSRPWRCEO7PVPSHHVLAOGF7KN3C>
+- Discussion on DNS over HTTPS (DoH) in TOR: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753>
+- Discussion on Encrypted ClientHello (ECH) in TOR: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144>

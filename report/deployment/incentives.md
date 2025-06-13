@@ -9,7 +9,7 @@ Various organizations that address humans in countries and regions with oppressi
 In all regions, the same applies to whistle-blower platforms which are possible under close observation by political, legal or corporate organizations.
 ## Malware - C2 operators
 
-Unencypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised extensions) are being used to identify malware-generated traffic, e.g.: https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption
+Unencypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised extensions) are being used to identify malware-generated traffic, e.g.: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption>
 Therefore operators of malware networks have an interest in staying stealthy and thus implementing ECH. Consequently, this will hinder these traffic-analysis.
 
 Currently, the usage of ECH is very low and thus in itself suspicious. To hide their ECH traffic, malware operators may be inclined to increase the general usage of ECH.

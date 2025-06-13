@@ -35,7 +35,7 @@ Typically, DoH servers communicate with authoritative DNS servers using traditio
 - Which entity handles the rotation of these keys and reloads the web server configuration?
 - What component creates (or services) the WKECH directory, ensuring only public keys are exposed and private keys remain secure?
 - How is the ZF triggered after each key rotation, ideally operating separately on a different host?
-- For documentation, refer to: https://github.com/defo-project/ech-dev-utils#user-content-server-details.
+- For documentation, refer to: <https://github.com/defo-project/ech-dev-utils#user-content-server-details>.
 
 ## Complexity of Configuring the Zone Factory
 
