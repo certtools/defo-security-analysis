@@ -49,6 +49,8 @@ All of this flow is non-trivial for a sysadmin to configure and add possible ste
 
 This sections looks at what could go wrong in case of misconfigurations or malicious attacks.
 
-WKECH directory must be secured: Only public keys, not private keys
+WKECH directory must be secured: Only public keys, not private keys. See section [WKECH](../../weaknesses/wkech)
 
-...
+## DNSSEC
+
+DNSSEC validation for ECH-enabled domains
