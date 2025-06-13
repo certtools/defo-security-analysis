@@ -19,15 +19,22 @@ While ECH provides privacy improvements over cleartext SNI, the protocol also in
 
 From the clients' perspective, the main question is:
 
-- which DoH/DoT recursive servers can one use? Are they even reachable from within the country of the client? Or are they blocked, re-directed or manipulated? Untrusted DoH/DoT recursive servers pose a problem
-- Can the client detect downgrade attacks and how does it deal with them? The RFC standard is a big vague here (["...the client SHOULD abandon its attempt to reach the service"](https://www.rfc-editor.org/rfc/rfc9460.html#name-handling-resolution-failure))
+- which DoH/DoT recursive servers can one use? Are they even reachable from within the country of the client? Or are they blocked, re-directed or manipulated? Untrusted DoH/DoT recursive servers pose a security as well as a privacy problem.
+- Can the client detect downgrade attacks and how does it deal with them? The RFC standard is a big vague here (SHOULD vs. MUST) (["...the client SHOULD abandon its attempt to reach the service"](https://www.rfc-editor.org/rfc/rfc9460.html#name-handling-resolution-failure))
 
 In addition, the authors of this report see two major concerns with ECH deployments for the internet as a whole:
 
-1. ECH leads to more centralization of the internet: the CDNs will profit. More centralization actually leads to more data being in the hands of one or a handful of organisations only. Therefore, the risk of de-anonymization by combining and correlating different data sets (ECH configs, DNS recursor query logs (such as [passive DNS](https://www.ietf.org/archive/id/draft-dulaunoy-dnsop-passive-dns-cof-12.html), DNS query traces), [Certificate transparency logs (CTLs)](https://datatracker.ietf.org/doc/rfc6962/)) actually *increases*: any organisation combining these data sets could most probably completely de-anonymize the traffic
-2. The complexity of the protocol and the setup costs (in terms of manpower) favor the large players. Smaller players might make mistakes in their setups. 
-3. Small and medium size organisations often don't host that many services on one IP address anyway. See "[The web is still small after more than a decade](https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade)", Nguyen Phong Hoang, et. al. Therefore the anonymity data set is usually small. Guessing and inferring which hostname a client connected to is trivial in this case. 
-4. Smaller and medium sized organisations won't necessarily profit from protecting the clients' privacy. Exceptions are listed in [incentives](deployment/incentives.md) 
+1. ECH depends on multiple protocols and specifications to work together seamlessly. The protocol's fundamental reliance on DNS creates a large attack surface that inherits all DNS security issues.
+In addition to DNS, quite a few other protocols are involved. This creates an even bigger attack surface. The interfaces between protocols are usually interesting targets for attackers. We recommend that the authors of the RFC drafts closely take a look at these edge-case vulnerabilities. The report highlights some of those such as the WKECH interface between DNS zones and CFS/backend servers.
+2. ECH leads to more centralization of the internet: the CDNs will profit. More centralization actually leads to more data being in the hands of only one or just a handful of organisations. Therefore, the risk of de-anonymization by combining and correlating different data sets (ECH configs, DNS recursor query logs (such as [passive DNS](https://www.ietf.org/archive/id/draft-dulaunoy-dnsop-passive-dns-cof-12.html), DNS query traces), [Certificate transparency logs (CTLs)](https://datatracker.ietf.org/doc/rfc6962/)) actually *increases*: any organisation combining these data sets could most probably completely de-anonymize the traffic. 
+3. The complexity of the protocol and the setup costs (in terms of manpower) favor the large players. Smaller players might make mistakes in their setups. 
+4. Small and medium size organisations often don't host that many services on one IP address anyway. See "[The web is still small after more than a decade](https://www.researchgate.net/publication/341627684_The_web_is_still_small_after_more_than_a_decade)", Nguyen Phong Hoang, et. al. Therefore the anonymity data set is usually small. Guessing and inferring which hostname a client connected to is trivial in the case that one IP address only hosts one service with one hostname.
+5. Smaller and medium sized organisations won't necessarily profit from protecting the clients' privacy. Exceptions are listed in [incentives](deployment/incentives.md). So why should they bother deploying ECH (and risking downtime)? We have a game-theoretic problem here. Which in turn will only lead to more centralization (see 3.) which will lead to 2.
 
-Organizations considering ECH deployment should prioritize security controls around DNS infrastructure, implement robust monitoring for ECH-related attacks, and prepare for the operational complexity introduced by the protocol's multi-layer dependencies.
+Nevertheless, apart from these overall considerations, we recommend that organizations wishing to deploy ECH should prioritize 
+
+- security controls around DNS infrastructure, 
+- implement robust monitoring for ECH-related attacks, 
+- and prepare for the operational complexity introduced by the protocol's multi-layer dependencies.
+
 

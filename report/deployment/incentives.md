@@ -1,12 +1,15 @@
 # Deployment Incentives
 
-This section looks which organizations have interests in deploying ECH.
+As mentioned in the [overview](../index.md) section, we see a game-theoretic problem: most organisations which host web services might not have the proper incentives to protect the client's privacy without additional rewards: they have no incentive to do so. Instead, managing the complex ECH setup, adds additional business continuity risks. 
+
+Therefore, this section looks at organizations which could have an interest in deploying ECH.
 
 ## Anti-Censor and Anti-Oppression
 
 Various organizations that address humans in countries and regions with oppression and legal pressure, like human rights organisations have an interest in protecting their website vistors' identity and thus using ECH as well as protect their website behind CDNs to reduce the risk of de-anonymization by traffic correlation analysis.
 
 In all regions, the same applies to whistle-blower platforms which are possible under close observation by political, legal or corporate organizations.
+
 ## Malware - C2 operators
 
 Unencypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised extensions) are being used to identify malware-generated traffic, e.g.: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption>
@@ -16,7 +19,7 @@ Currently, the usage of ECH is very low and thus in itself suspicious. To hide t
 
 ## Pornography industry
 
- Starting with February 2019, South Korea started blocking TLS-encrypted traffic to sites forbidden by the policies, most prominently pornography.
+Starting with February 2019, South Korea started blocking TLS-encrypted traffic to sites forbidden by the policies, most prominently pornography.
 The porn industry, being blocked, has therefore a commercial interest in using ECH, which allows them to reach customers in an entire 50-million-inhabitant country.
 
 - [South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021](https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/)

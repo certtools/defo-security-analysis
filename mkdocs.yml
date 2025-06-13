@@ -13,8 +13,8 @@ nav:
       - Separation issues: deployment/separation.md
   - Weaknesses: 
       - Complexity: weaknesses/complexity.md
+      - DNS: weaknesses/dns.md
       - WKECH: weaknesses/wkech.md
-      - DoH/DOT: weaknesses/dependency_on_doh.md
       - Others: weaknesses/others.md
   - Clients considerations: 
       - Browsers: clients/browsers.md
