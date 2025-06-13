@@ -2,6 +2,8 @@
 
 Security analysis of the defo2 project + HOWTO for web admins
 
+Rendered version: https://certtools.github.io/defo-security-analysis/
+
 ## Deliverable text
 
 Deployment Scenarios Analysis:  there are many variations in how ECH can be deployed and the varying relationships between the client and server entities involved. There therefore remains a need to map out residual privacy leaks in such scenarios and how to plug those, given the existence of additional privacy mechanisms such as Qname Minimization, Oblivious DNS-over-HTTPS, and MASQUE.
