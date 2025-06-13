@@ -1,39 +1,16 @@
-# Browsers
+# Browsers and ECH (Encrypted Client Hello)
 
-browsers are permissive
-if dns is misconfigured, browser tries without ECH
+Modern web browsers are notably permissive toward emerging standards, often prioritizing user functionality over enforcing new security features. With their quick adoption of new technologies and fast release cycles, they effectively serve as experimental platforms for evaluating and implementing new protocols in real-world environments.
 
-explore how FF and other browsers behave with famility safety software exactly, so far not tested
+The leading browsers Firefox, Chrome, Edge and further Brave, Opera, Vivaldi adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish. Such failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the implementation of ECH can be thwarted if an attacker holds sway over any part of the network path between the user and the intended target.
 
-## Non-pure-HTTPS traffic
-
-### Jitsi
-
-- UDP/10000 Jitsi video bridge
-- UDP/3478 STUN server (coturn)
-- TCP/5349 fall-back connection for video/audio communication (in case the UDP connection did not work)
-- TCP/443 (HTTPS) only for the UI, protected with ECH by default
-
-### Network Proxy
-
-SOCKS, HTTPS
+For the implementation of ECH, attention must not only be paid to pure HTTPS traffic but also to other communication channels such as WebRTC and network proxies, as neglecting ECH on these channels can introduce ways for de-anonymization.
 
 ### OCSP and CRL
 
-Downloaded via HTTP but signed by the CA
-Blocking the access to the lists is possible with packet inspection due to the traffic being unencrypted
-Browser soft-fail by default
-OCSP is dead: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>
-Work ongoing to fix these issues
+Online Certificate Status Protocol (OCSP) and Certificate Revocation Lists (CRL) are core components in the validation of digital WebPKI certificates. The data is typically transmitted over HTTP but verified through signing by the Certificate Authority (CA).
+Access to these lists can be obstructed through packet inspection due to the unencrypted nature of the traffic. Browsers generally employ a soft-fail approach for CRL validations by default, meaning the information about a revoked certificate may not reach the client. If an adversary has the capability to interfere at this stage, they may effectively disrupt other, more important connections as well.
 
-### QUIC and SPDY
+OCSP has recently been called into question and may be nearing obsolescence: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>. As a result, the CRLs' importance increases again.
 
-should work
-
-## Firefox
-
-timing issue FF: no new information
-
-### Deliberately disabled
-
-The Interop report mentions that ECH is disabled deliberately when local interception software is detected, and also with ISP- or state-level censorship
+This study found no relevant interplay of ECH on these mechanisms.

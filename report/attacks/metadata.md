@@ -1,9 +1,11 @@
 ## Explicit metadata
 
 What is left in the protocols?
+Nothing.
 
+Usage of ECH itself
 ## Implicit metadata
 
-### CRL
+## DNS queries
 
-http usage
+Recommended: use wkech

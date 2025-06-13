@@ -51,4 +51,4 @@ It is imperative to secure the WKECH directory: it must contain only public keys
 
 ## DNSSEC implementation
 
-Implementing DNSSEC (Domain Name System Security Extensions) is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters. Ensuring robust DNSSEC configuration can significantly bolster the security framework associated with ECH implementations, fostering trust and reliability in web communications.
+Implementing DNSSEC (Domain Name System Security Extensions) is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
