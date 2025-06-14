@@ -31,15 +31,22 @@ Typically, DoH servers communicate with authoritative DNS servers using traditio
 
 ## Webserver configuration
 
-- Which component is responsible for generating the ECH keys with the appropriate parameters?
+On the webserver side, several considerations must be addressed:
+
+- Which component generates the ECH keys with the appropriate parameters?
 - Which entity handles the rotation of these keys and reloads the web server configuration?
 - What component creates (or services) the WKECH directory, ensuring only public keys are exposed and private keys remain secure?
-- How is the ZF triggered after each key rotation, ideally operating separately on a different host?
-- For documentation, refer to: <https://github.com/defo-project/ech-dev-utils#user-content-server-details>.
+- How is the ZF triggered after each key rotation, ideally operating separately on a different host? (see [Separation](separation.md)).
+
+There are similarities between the ACME protocols (made popular by the Letsencrypt initiative) and ECH, as both generate keys on the webserver and write information to the DNS zone.
+
+To facilitate the ECH deployment, straightforward and easy tools, covering these processes, akin to ACME clients or Apache's [mod_md](https://httpd.apache.org/docs/2.4/mod/mod_md.html) need to be developed.
+
+Guidance on setting up webservers with ECH, can be found in the ECH Dev utilites at <https://github.com/defo-project/ech-dev-utils#user-content-server-details>
 
 ## Complexity of Configuring the Zone Factory
 
-The ZF must be aware of the following:
+The Zone Factory must be aware of the following:
 
 1. Identifying well-known sites (`wkech`) to monitor.
 2. Establishing a refresh schedule for the keys (either on a fixed interval or responsive to activity).
@@ -47,9 +54,7 @@ The ZF must be aware of the following:
 
 The ZF requires write access to the zone files and must have the capability to reload the nameserver configuration. This setup is non-trivial for a systems administrator, as misconfigurations or oversights can introduce complications.
 
-It is imperative to secure the WKECH directory: it must contain only public keys, be immutable (including to any aliases), and limit access solely to the web server itself. For more information, please refer to the section on [WKECH](../../weaknesses/wkech.md).
-
-FIXME something similar to certbot or https://httpd.apache.org/docs/2.4/mod/mod_md.html
+It is imperative to secure the WKECH directory: it must contain only public keys, be immutable (including to any aliases), and limit access solely to the web server itself. For more information, please refer to the section on [WKECH](../weaknesses/wkech.md).
 
 ## DNSSEC implementation
 
