@@ -16,10 +16,10 @@ The following is a streamlined overview of the workflow involved when a browser 
 <li style="list-style: upper-roman;">The DoH server then queries the authoritative DNS server for the required information, which is managed by the website operator.</li>
 <li style="list-style: upper-roman;">Once retrieved, the information is relayed from the authoritative DNS server to the DoH server, potentially being cached for future requests by this or other clients.</li>
 <li style="list-style: upper-roman;">The DoH server subsequently transmits the information to the client.</li>
-<li style="list-style: upper-roman;">Utilizing the A/AAAA records and the ECHConfig, the browser sends a request to the web server to access the designated website.</li>
+<li style="list-style: upper-roman;">Utilizing the A/AAAA records and the ECHConfig, the browser sends an HTTP request to the web server to fetch the website.</li>
 </ol>
 
-Typically, DoH servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are employed.
+Typically, DoH servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are possible.
 
 ### Server-side Process
 
@@ -49,6 +49,8 @@ The ZF requires write access to the zone files and must have the capability to r
 
 It is imperative to secure the WKECH directory: it must contain only public keys, be immutable (including to any aliases), and limit access solely to the web server itself. For more information, please refer to the section on [WKECH](../../weaknesses/wkech.md).
 
+FIXME something similar to certbot or https://httpd.apache.org/docs/2.4/mod/mod_md.html
+
 ## DNSSEC implementation
 
-Implementing DNSSEC (Domain Name System Security Extensions) is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
+DNSSEC (Domain Name System Security Extensions) implementation is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
