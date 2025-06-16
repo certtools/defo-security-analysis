@@ -31,7 +31,10 @@ nav:
   - References: references.md
 
 
-theme: readthedocs
-
-
-
+theme: material
+plugins:
+  - to-pdf:
+      author: L. Aaron Kaplan, Sebastian Wagner
+      cover_title: Remaining weaknesses in ECH
+      cover_subtitle: TODO
+      output_path: build/document.pdf
