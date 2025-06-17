@@ -16,10 +16,10 @@ The following is a streamlined overview of the workflow involved when a browser 
 <li style="list-style: upper-roman;">The DoH server then queries the authoritative DNS server for the required information, which is managed by the website operator.</li>
 <li style="list-style: upper-roman;">Once retrieved, the information is relayed from the authoritative DNS server to the DoH server, potentially being cached for future requests by this or other clients.</li>
 <li style="list-style: upper-roman;">The DoH server subsequently transmits the information to the client.</li>
-<li style="list-style: upper-roman;">Utilizing the A/AAAA records and the ECHConfig, the browser sends a request to the web server to access the designated website.</li>
+<li style="list-style: upper-roman;">Utilizing the A/AAAA records and the ECHConfig, the browser sends an HTTP request to the web server to fetch the website.</li>
 </ol>
 
-Typically, DoH servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are employed.
+Typically, DoH servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are possible.
 
 ### Server-side Process
 
@@ -31,15 +31,22 @@ Typically, DoH servers communicate with authoritative DNS servers using traditio
 
 ## Webserver configuration
 
-- Which component is responsible for generating the ECH keys with the appropriate parameters?
+On the webserver side, several considerations must be addressed:
+
+- Which component generates the ECH keys with the appropriate parameters?
 - Which entity handles the rotation of these keys and reloads the web server configuration?
 - What component creates (or services) the WKECH directory, ensuring only public keys are exposed and private keys remain secure?
-- How is the ZF triggered after each key rotation, ideally operating separately on a different host?
-- For documentation, refer to: <https://github.com/defo-project/ech-dev-utils#user-content-server-details>.
+- How is the ZF triggered after each key rotation, ideally operating separately on a different host? (see [Separation](separation.md)).
+
+There are similarities between the ACME protocols (made popular by the Letsencrypt initiative) and ECH, as both generate keys on the webserver and write information to the DNS zone.
+
+To facilitate the ECH deployment, straightforward and easy tools, covering these processes, akin to ACME clients or Apache's [mod_md](https://httpd.apache.org/docs/2.4/mod/mod_md.html) need to be developed.
+
+Guidance on setting up webservers with ECH, can be found in the ECH Dev utilites at <https://github.com/defo-project/ech-dev-utils#user-content-server-details>
 
 ## Complexity of Configuring the Zone Factory
 
-The ZF must be aware of the following:
+The Zone Factory must be aware of the following:
 
 1. Identifying well-known sites (`wkech`) to monitor.
 2. Establishing a refresh schedule for the keys (either on a fixed interval or responsive to activity).
@@ -47,8 +54,8 @@ The ZF must be aware of the following:
 
 The ZF requires write access to the zone files and must have the capability to reload the nameserver configuration. This setup is non-trivial for a systems administrator, as misconfigurations or oversights can introduce complications.
 
-It is imperative to secure the WKECH directory: it must contain only public keys, be immutable (including to any aliases), and limit access solely to the web server itself. For more information, please refer to the section on [WKECH](../../weaknesses/wkech.md).
+It is imperative to secure the WKECH directory: it must contain only public keys, be immutable (including to any aliases), and limit access solely to the web server itself. For more information, please refer to the section on [WKECH](../weaknesses/wkech.md).
 
 ## DNSSEC implementation
 
-Implementing DNSSEC (Domain Name System Security Extensions) is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters. Ensuring robust DNSSEC configuration can significantly bolster the security framework associated with ECH implementations, fostering trust and reliability in web communications.
+DNSSEC (Domain Name System Security Extensions) implementation is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
