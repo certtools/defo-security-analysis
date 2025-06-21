@@ -1,5 +1,7 @@
 # TOR Network
 
+XXX Feedback - 8.3: FF no longer insists on DoH to use ECH, I wish I knew more about how Tor does DNS but haven't had the time
+
 Currently, Encrypted ClientHello (ECH) is not supported on the TOR network, primarily because the Firefox foundation mandates the use of DNS over HTTPS (DoH) for ECH functionality, while TOR disables DoH in order to uphold user privacy.
 TOR’s architecture is designed to enhance security and privacy, which mitigates the necessity for the additional layers that DoH and ECH provide. For more information how TOR protects their users' privacy, please refer to the [TOR website](https://support.torproject.org/censorship/).
 Contrary to DoT and DoH, TOR employs an alternative approach, utilizing DNS over the TOR network and subsequently through the exit node.

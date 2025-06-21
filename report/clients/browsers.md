@@ -1,5 +1,8 @@
 # Browsers and ECH
 
+XXX Feedback - 8.1: Is DoH a default setting?
+XXX Feedback - 8.1: "Consequently, the implementation of ECH can be thwarted if an attacker holds sway over any part of the network path between the user and the intended target." there's a subtlety there - an attacker with control over the client's n/w connection can block TLS, with ECH it's more they could disable the feature; and it depends on where the adversary is etc.
+
 Modern web browsers are notably permissive toward emerging standards, often prioritizing user functionality over enforcing new security features if the potential impact is too disruptive. With their quick adoption of new technologies and fast release cycles, they effectively serve as experimental platforms for evaluating and implementing new protocols in real-world environments.
 
 The leading browsers Firefox, Chrome, Edge and further Brave, Opera, Vivaldi adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish. Such failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the implementation of ECH can be thwarted if an attacker holds sway over any part of the network path between the user and the intended target.
@@ -7,6 +10,8 @@ The leading browsers Firefox, Chrome, Edge and further Brave, Opera, Vivaldi ado
 For the implementation of ECH, attention must not only be paid to pure HTTPS traffic but also to other communication channels such as WebRTC and network proxies, as neglecting ECH on these channels can introduce ways for de-anonymization.
 
 ## Browsers' Policy Enforcement Power
+
+XXX Feedback - 8.1.1: I'm not aware that CA/B forum has had any interactions on ECH at all and suspect the browsers would not want CAs even involved in what they do with ECH; I also don't think CA/B forum has had any impact on DoH, but I've not tracked that
 
 In the past, Browsers and the CA/Browser forum have repeatedly shown that they can enforce new policies towards network and website operators, pushing them to fast adjustments to not risk their website's reputations, such as:
 
@@ -21,6 +26,9 @@ These policies are increasingly getting tighter, pushing the operators to more a
 **Therefore, we emphasize that the CA/Browser forum must not use its power to enforce ECH** because it pushes users to DoH.
 
 ## DoH server oligarchy
+
+XXX Feedback - 8.1.2: "use Cloudflare's DoH server" - I don't think things are so consistent and those are defaults (powerful things those, but can be changed)
+XXX Feedback - 8.1.2: _important_ DoH is not required for ECH - never has been for Chrome+friends, used to be for FF, but not today (since ~6-9 months)
 
 Firefox and Edge use Coudflare's DoH server, and Chrome uses Google's DoH server.
 Just two DoH servers provide DoH services to the majority of browser users.

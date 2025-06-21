@@ -1,5 +1,6 @@
 ## Separation issues
 
+XXX Feedback - 6.3.1: don't see how NIS2 is relevant
 ### Network separations
 
 CFS and DNS can be in separate networks with firewall rules preventing any outgoing connection from the CFS to internal networks and for the DNS server incoming connections from CFS network ranges

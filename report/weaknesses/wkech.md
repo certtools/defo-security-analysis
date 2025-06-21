@@ -1,7 +1,12 @@
+XXX Feedback - 7.3: yep, don't publish your private keys:-)
+
 The web server **MUST** ensure that `.well-known/origin-svcb` is well protected.
 The web server **MUST** ensure that `.well-known/origin-svcb` does not contain any private keys.
 
 ## Attacks against syncing the ZF with the CFS / backend
+
+XXX Feedback - 7.3.1: not sure clock sync is a real threat there
+XXX Feedback - 7.3.1: I think wkech is probably correct to depend on HTTPS working
 
 If we look at the (at the time of writing this report) most current version of the [WKECH Draft](https://datatracker.ietf.org/doc/html/draft-ietf-tls-wkech-07), then we can identify a couple of weaknesses in the interplay between WKECH and ECH:
 

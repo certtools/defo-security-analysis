@@ -2,11 +2,18 @@
 # De-anonymization by Metadata
 ## Explicit: ECH usage
 
+XXX Feedback - 10.1.1: GREASE needs mention here
+
 The ECH standard appears to be well designed minimizing metadata.
 
 Only the usage of ECH itself is left as a suspicious marker, drawing the attention of censors to possibly interesting traffic. See [Censorship](../censorship.md) for more information.
 
 ## Implicit: DNS queries
+
+XXX Feedback - 10.1.2: the one hour thing is just what CF did and we followed, there's no RECOMMENDED in the spec
+XXX Feedback - 10.1.2: what is decentralised DoH? there's >1 such thing so a ref to what' s meant here would be good, as e.g.- spraying DNS queries over >1 recursive isn't effective longer term
+XXX Feedback - 10.1.2: "Further, the WKECH standard could be used by browsers for key refreshment, reducing the metadata at DNS server operators." yes, at the expense of a round-trip, which is more or less the same as `retry-configs`
+XXX Feedback speaking of `retry-configs` - that probably warrants some mention too
 
 As the [Deployment Overview](../deployment/overview.md) outlines, clients request the ECH configuration via DNS during the initial setup and for subsequent refreshes.
 Since the recommended lifespan for the keys is one hour, clients must update their ECH keys at least once every hour.

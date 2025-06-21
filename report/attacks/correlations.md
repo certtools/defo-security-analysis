@@ -1,5 +1,7 @@
 # Correlations on traffic patterns
 
+XXX Feedback - 10.2: that probably needs a bit more explanation (for most readers), and I've always wondered how much it really needs a closed-world for the attacks to succeed
+
 There is extensive research on this topic. Traffic corrections do not depend on unencrypted SNI, so ECH will not have any effect on this.
 
 The idea is that you can still correlate a lot if you have independent datasets such as:

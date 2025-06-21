@@ -1,5 +1,7 @@
 # Censorship
 
+XXX Feedback - section 9: probably needs a caveat that this just considers a few places - OTF also fund OONI and other related projects in this space
+
 This section provides an overview of the regions currently use SNI for censorship purposes, those blocking ECH usage, and countries that may soon implement similar measures.
 
 For a comprehensive analysis of internet censorship practices around the globe, see [A Survey of Worldwide Censorship Techniques](https://www.ietf.org/archive/id/draft-irtf-pearg-censorship-10.html).
