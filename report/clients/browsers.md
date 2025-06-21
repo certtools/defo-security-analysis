@@ -1,17 +1,14 @@
 # Browsers and ECH
 
-XXX Feedback - 8.1: Is DoH a default setting?
-XXX Feedback - 8.1: "Consequently, the implementation of ECH can be thwarted if an attacker holds sway over any part of the network path between the user and the intended target." there's a subtlety there - an attacker with control over the client's n/w connection can block TLS, with ECH it's more they could disable the feature; and it depends on where the adversary is etc.
-
 Modern web browsers are notably permissive toward emerging standards, often prioritizing user functionality over enforcing new security features if the potential impact is too disruptive. With their quick adoption of new technologies and fast release cycles, they effectively serve as experimental platforms for evaluating and implementing new protocols in real-world environments.
 
-The leading browsers Firefox, Chrome, Edge and further Brave, Opera, Vivaldi adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish. Such failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the implementation of ECH can be thwarted if an attacker holds sway over any part of the network path between the user and the intended target.
+The browser Firefox adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish. The Browsers Chrome and Edge use DoH if the system's default resolver supports it. Opera, Brave and Vivaldi do not use DoH by defaut.
+
+Such connection failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the usage of ECH can be silently thwarted if an attacker holds sway over any part of the network path between the user and the intended target. An attacker with control over the network connection can though also block TLS and other security measures, but not without alarm bells going off in the browser and other clients.
 
 For the implementation of ECH, attention must not only be paid to pure HTTPS traffic but also to other communication channels such as WebRTC and network proxies, as neglecting ECH on these channels can introduce ways for de-anonymization.
 
 ## Browsers' Policy Enforcement Power
-
-XXX Feedback - 8.1.1: I'm not aware that CA/B forum has had any interactions on ECH at all and suspect the browsers would not want CAs even involved in what they do with ECH; I also don't think CA/B forum has had any impact on DoH, but I've not tracked that
 
 In the past, Browsers and the CA/Browser forum have repeatedly shown that they can enforce new policies towards network and website operators, pushing them to fast adjustments to not risk their website's reputations, such as:
 
@@ -23,20 +20,20 @@ The reasons for this effectiveness lie in the huge market share of a small numbe
 
 These policies are increasingly getting tighter, pushing the operators to more automation and more complex environments. This, in turn makes the operation less efficient pushing many of them to centralized service operators. This counteracts the original intention of a decentralized Internet.
 
-**Therefore, we emphasize that the CA/Browser forum must not use its power to enforce ECH** because it pushes users to DoH.
+**Therefore, we emphasize that Browsers must not use its power to enforce ECH** because they push users to DoH.
 
 ## DoH server oligarchy
 
-XXX Feedback - 8.1.2: "use Cloudflare's DoH server" - I don't think things are so consistent and those are defaults (powerful things those, but can be changed)
-XXX Feedback - 8.1.2: _important_ DoH is not required for ECH - never has been for Chrome+friends, used to be for FF, but not today (since ~6-9 months)
-
 Firefox and Edge use Coudflare's DoH server, and Chrome uses Google's DoH server.
 Just two DoH servers provide DoH services to the majority of browser users.
+Although users could change the DoH server setting, only a fraction will do that or even understand what DoH is.
 This imbalance implies various problem areas:
 
 - Privacy: Despite their emphasis that they won't save the query data, these policies can change at any time. Users are locked into a trust dependency without opt-in.
 - Jurisdiction and Geopolitics: The DoH servers are operated by companies in a single country. Their legal system can force them to share the query data at any time, impacting users **worldwide** without any possibility for them to notice.
 - Market dominance: Just two operators control the majority of all DoH traffic. This creates a huge market dominance. In the future, this can lead to them effectively taking over the role of Domain registrars.
+
+XXX Feedback - 8.1.2: _important_ DoH is not required for ECH - never has been for Chrome+friends, used to be for FF, but not today (since ~6-9 months)
 
 As DoH is required for ECH, these problems are worsened by ECH.
 ECH aims to defend users' privacy, but its dependency on DoH thwarts this goal.
