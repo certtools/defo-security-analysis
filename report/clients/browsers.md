@@ -2,7 +2,9 @@
 
 Modern web browsers are notably permissive toward emerging standards, often prioritizing user functionality over enforcing new security features if the potential impact is too disruptive. With their quick adoption of new technologies and fast release cycles, they effectively serve as experimental platforms for evaluating and implementing new protocols in real-world environments.
 
-The browser Firefox adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish. The Browsers Chrome and Edge use DoH if the system's default resolver supports it. Opera, Brave and Vivaldi do not use DoH by defaut.
+The browser Firefox adopted DoH as their default setting, reverting back to Do53 should a DoH connection fail to establish.
+The Browsers Chrome and Edge use DoH if the system's default resolver supports it.
+Opera, Brave and Vivaldi do not use DoH by defaut.
 
 Such connection failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the usage of ECH can be silently thwarted if an attacker holds sway over any part of the network path between the user and the intended target. An attacker with control over the network connection can though also block TLS and other security measures, but not without alarm bells going off in the browser and other clients.
 
@@ -24,6 +26,12 @@ These policies are increasingly getting tighter, pushing the operators to more a
 
 ## DoH server oligarchy
 
+If communication between client and server only uses ECH to hide the destination server's name, but does not use encrypted DNS, intermediaries are still able to eavesdrop the destination by observing the Name Resolution traffic.
+Therefore ECH relies on the usage of DoH, DoT (DNS over TLS) or DoQ (DNS over QUIC) to hide the server's name entirely.
+
+Of the three encrypted DNS protocols, DoH is the most used, therefore we focus here on this one.
+XXX: Is DNS over QUIC equivalent?
+
 Firefox and Edge use Coudflare's DoH server, and Chrome uses Google's DoH server.
 Just two DoH servers provide DoH services to the majority of browser users.
 Although users could change the DoH server setting, only a fraction will do that or even understand what DoH is.
@@ -31,12 +39,13 @@ This imbalance implies various problem areas:
 
 - Privacy: Despite their emphasis that they won't save the query data, these policies can change at any time. Users are locked into a trust dependency without opt-in.
 - Jurisdiction and Geopolitics: The DoH servers are operated by companies in a single country. Their legal system can force them to share the query data at any time, impacting users **worldwide** without any possibility for them to notice.
-- Market dominance: Just two operators control the majority of all DoH traffic. This creates a huge market dominance. In the future, this can lead to them effectively taking over the role of Domain registrars.
+- Market dominance: Two companies control the majority of all DoH traffic. This creates a huge market dominance. In the future, this could lead to them effectively taking over the role of Domain registrars.
 
 XXX Feedback - 8.1.2: _important_ DoH is not required for ECH - never has been for Chrome+friends, used to be for FF, but not today (since ~6-9 months)
 
-As DoH is required for ECH, these problems are worsened by ECH.
-ECH aims to defend users' privacy, but its dependency on DoH thwarts this goal.
+Firefox used to require DoH for ECH XXX, but stopped doing so XXX.
+As DoH is required for proper ECH, these problems are worsened by ECH.
+ECH aims to defend users' privacy, but its reliance on DoH may thwart this goal.
 
 ## OCSP and CRL
 

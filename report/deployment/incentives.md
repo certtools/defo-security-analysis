@@ -1,6 +1,7 @@
 # Deployment Incentives
 
 XXX Feedback - 6.2: the usage of ECH itself raises suspicion among censors - see GREASE
+XXX check if FF and Chrome do that
 
 As mentioned in the [overview](../index.md) section, we see a game-theoretic problem: most organizations that host web services might not have the proper incentives to protect the client's privacy without additional rewards: they have no incentive to do so. Instead, managing the complex ECH setup adds additional business continuity risks.
 
@@ -16,11 +17,12 @@ In all regions, the same applies to whistle-blower platforms which are possible 
 
 ## Malware - C2 operators
 
-XXX Feedback - 6.2.2: not convinced, malware can use any SNI today
+Unencrypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised extensions) are being used to identify malware-generated traffic.
 
-Unencrypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised extensions) are being used to identify malware-generated traffic, e.g.: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption>
+Therefore operators of malware networks have an interest in protecting their traffic and thus implementing ECH. Consequently, this will hinder - but not disable - this traffic-analysis.
+At the moment a similar effect could be gained by using different or random hosts in SNI, but that itself will form a pattern and and thus has limited effect.
 
-Therefore operators of malware networks have an interest in staying stealthy and thus implementing ECH. Consequently, this will hinder - but not disable - this traffic-analysis.
+For example, see: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption> for a study on traffic classification not using SNI.
 
 Currently, the usage of ECH is very low and thus in itself suspicious. To hide their ECH traffic, malware operators may be inclined to increase the general usage of ECH.
 
@@ -31,18 +33,16 @@ Starting with February 2019, South Korea started blocking TLS-encrypted traffic 
 The porn industry, being blocked, has therefore a commercial interest in using ECH, which allows them to reach customers in an entire 50-million-inhabitant country.
 
 - [South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021](https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/)
-
 - [South Korea is Censoring the Internet by Snooping on SNI Traffic - Bleepingcomputer.com, February 13th, 2019](https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/)
 
 ## CDNs
-
-XXX Feedback - 6.2.4: business incentive isn't just lower, they don't have a current biz model for split-mode (could change, but no sign so far)
 
 CDNs can offer their customers ECH (shared mode) as part of their offerings, selling them a privacy feature for low internal costs as they profit highly from scaling effects.
 
 For website owners who want to protect their visitors and offer them enhanced privacy, it is much easier and cheaper to go to CDNs than to operate ECH on their own, given the high complexity and costs. An equivalent effect is in progress for about 15 years in the email sector. As operating email services safely got increasingly complex and challenging, more and more organizations outsourced their email infrastructure to large email service providers.
 
 For ECH's split mode the business incentive is lower than for shared mode, as in split mode the CDNs can sell fewer services to their customers.
+Currently there are no known offers for split-mode ECH.
 
 ## Small and Medium-Sized Hosting Providers and research and education institutions (NRENs)
 

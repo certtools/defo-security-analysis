@@ -31,8 +31,6 @@ Typically, DoH servers communicate with authoritative DNS servers using traditio
 
 ## Webserver configuration
 
-XXX Feedback - 6.1.2: handling ECH private key file is same as TLS private key file so not new really
-
 On the webserver side, several considerations must be addressed:
 
 - Which component generates the ECH keys with the appropriate parameters?
@@ -41,6 +39,7 @@ On the webserver side, several considerations must be addressed:
 - How is the ZF triggered after each key rotation, ideally operating separately on a different host? (see [Separation](separation.md)).
 
 There are similarities between the ACME protocols (made popular by the Letsencrypt initiative) and ECH, as both generate keys on the webserver and write information to the DNS zone.
+ECH adds the additional WKECH, see also [WKECH](../weaknesses/wkech.md) for possible problems related to it.
 
 To facilitate the ECH deployment, straightforward and easy tools, covering these processes, akin to ACME clients or Apache's [mod_md](https://httpd.apache.org/docs/2.4/mod/mod_md.html) need to be developed.
 
@@ -48,14 +47,11 @@ Guidance on setting up webservers with ECH, can be found in the ECH Dev utilites
 
 ## Complexity of Configuring the Zone Factory
 
-XXX Feedback - 6.1.3: bullet item 3 follows for free from 1 & 2
-XXX Feedback- 6.1.3: securing the wkech directory - you could publish the private but that'd be dim - an easily avoided risk (but sure, could happen same as the TLS private)
-
 The Zone Factory must be aware of the following:
 
 1. Identifying well-known sites (`wkech`) to monitor.
 2. Establishing a refresh schedule for the keys (either on a fixed interval or responsive to activity).
-3. Knowing which zone files (housed on which servers) require updates.
+3. Knowing which zone files on which servers require updates.
 
 The ZF requires write access to the zone files and must have the capability to reload the nameserver configuration. This setup is non-trivial for a systems administrator, as misconfigurations or oversights can introduce complications.
 
@@ -63,6 +59,4 @@ It is imperative to secure the WKECH directory: it must contain only public keys
 
 ## DNSSEC implementation
 
-XXX Feedback - 6.1.4: DNSSEC is not IMO crucial at all
-
-DNSSEC (Domain Name System Security Extensions) implementation is crucial to enable clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
+DNSSEC (Domain Name System Security Extensions) implementation enables clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
