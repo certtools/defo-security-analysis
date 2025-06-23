@@ -55,6 +55,6 @@ OCSP has recently been called into question and may be nearing obsolescence: <ht
 
 This study found no relevant interplay of ECH on CRL and OCSP mechanisms.
 
-[^1]: [Change Log of Firefox 119](https://www.mozilla.org/en-US/firefox/119.0/releasenotes/), [Mozilla Blog Post on ECH introduction](https://blog.mozilla.org/en/firefox/encrypted-hello/)
+[^1]: [Change Log of Firefox 119](https://www.mozilla.org/en-US/firefox/119.0/releasenotes/), [Mozilla Blog Post on ECH introduction](https://blog.mozilla.org/en/firefox/encrypted-hello/), [Mozilla Wiki on ECH](https://wiki.mozilla.org/Security/Encrypted_Client_Hello#Dependency_on_DoH)
 
 [^2]: [Change Log of Firefox 129](https://www.mozilla.org/en-US/firefox/129.0/releasenotes/)
