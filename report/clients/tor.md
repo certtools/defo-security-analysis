@@ -1,12 +1,14 @@
 # Tor Network
 
-XXX Feedback - 8.3: FF no longer insists on DoH to use ECH, I wish I knew more about how Tor does DNS but haven't had the time
+Currently, Encrypted ClientHello (ECH) is not supported on the Tor network.
+Tor’s architecture is designed well to enhance security and privacy, reducing the necessity for the additional layers that DoH and ECH provide.
+Also, Tor addresses the concerns that both DoH and ECH aim to resolve through its Tor onion services.
 
-Currently, Encrypted ClientHello (ECH) is not supported on the Tor network, primarily because the Firefox foundation mandates the use of DNS over HTTPS (DoH) for ECH functionality, while Tor disables DoH in order to uphold user privacy.
-Tor’s architecture is designed to enhance security and privacy, which mitigates the necessity for the additional layers that DoH and ECH provide. For more information how Tor protects their users' privacy, please refer to the [Tor website](https://support.torproject.org/censorship/).
-Contrary to DoT and DoH, Tor employs an alternative approach, utilizing DNS over the Tor network and subsequently through the exit node.
-Tor addresses the concerns that both DoH and ECH aim to resolve, through its Tor onion services.
+Previously, Firefox mandated using DNS over HTTPS (DoH) for ECH functionality (see Section [Browsers](browsers.md)), which was a blocker as Tor does not use or support DoH.
+Contrary to DoT and DoH, Tor employs an alternative approach for Name resolution inside the Tor network[^1].
 
-- Detailed explanation on Tor's non-usage of DoH can be found here: <https://lists.torproject.org/mailman3/hyperkitty/list/tor-dev@lists.torproject.org/thread/6GDO7CYEFIKID7QQCRVYVFNIVETWWWWY/#6ZBFGNSRPWRCEO7PVPSHHVLAOGF7KN3C>
-- Discussion on DNS over HTTPS (DoH) in Tor: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753>
-- Discussion on Encrypted ClientHello (ECH) in Tor: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144>
+There are ongoing discussions on whether and how DoH can benefit for the users' privacy and how it needs to be configured and implemented.
+For detailed information, we refer to the discussion of the Tor community on [DNS over HTTPS (DoH) in Tor](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753) and on [Encrypted ClientHello (ECH) in Tor](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144).
+For more information on how Tor protects their users' privacy, please refer to the [Tor website](https://support.torproject.org/censorship/).
+
+[^1]: [Tor specifications: Remote hostname lookup](http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/remote-hostname-lookup.html), [Opening a new stream: The begin/connected handshake](http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/opening-streams.html#opening)

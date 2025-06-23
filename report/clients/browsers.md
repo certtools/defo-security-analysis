@@ -46,6 +46,8 @@ Firefox used to require DoH for ECH in Firefox 119[^1], but stopped doing so in 
 As DoH is required for proper ECH, these problems are worsened by ECH.
 ECH aims to defend users' privacy, but its reliance on DoH may thwart this goal.
 
+The Tor is reluctant on the usage of DoH for the same reason[^3].
+
 ## OCSP and CRL
 
 Online Certificate Status Protocol (OCSP) and Certificate Revocation Lists (CRL) are core components in the validation of digital WebPKI certificates. The data is typically transmitted over HTTP but verified through signing by the Certificate Authority (CA).
@@ -58,3 +60,5 @@ This study found no relevant interplay of ECH on CRL and OCSP mechanisms.
 [^1]: [Change Log of Firefox 119](https://www.mozilla.org/en-US/firefox/119.0/releasenotes/), [Mozilla Blog Post on ECH introduction](https://blog.mozilla.org/en/firefox/encrypted-hello/), [Mozilla Wiki on ECH](https://wiki.mozilla.org/Security/Encrypted_Client_Hello#Dependency_on_DoH)
 
 [^2]: [Change Log of Firefox 129](https://www.mozilla.org/en-US/firefox/129.0/releasenotes/)
+
+[^3]: [Tor Issue Tracker: Think about using DNS over HTTPS for Tor Browser](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753)
