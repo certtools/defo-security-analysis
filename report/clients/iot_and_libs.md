@@ -11,6 +11,7 @@ And further, when a vulnerability or bug is identified within the software stack
 Moreover, numerous IoT devices lack automatic update capabilities at all, and in some instances, these updates are not feasible as well.
 The underlying software quality often suffers as well, driven by constraints related to financial resources and the sheer scale of development.
 Paradoxically, due to the critical nature of maintaining device security amid the difficulties associated with updates, the quality of the software must actually be higher to mitigate these risks effectively beforehand.
+
 ## Implications by Packaging
 
 TLS libraries that are often packaged by other software provided by [package management systems](https://en.wikipedia.org/wiki/Package_manager).

@@ -35,6 +35,11 @@ markdown_extensions:
   # https://t.pxeger.com/mkdocs-material/reference/footnotes/
   - footnotes
 
+plugins:
+  - pandoc:
+      combined: true
+      pandoc_extra_args: '--resource-path=report/deployment:deployment:report:. --toc --number-sections=true'
+  - search
 
 theme: readthedocs
 
