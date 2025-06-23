@@ -1,13 +1,12 @@
 # Deployment Incentives
 
-XXX Feedback - 6.2: the usage of ECH itself raises suspicion among censors - see GREASE
-XXX check if FF and Chrome do that
-
 As mentioned in the [overview](../index.md) section, we see a game-theoretic problem: most organizations that host web services might not have the proper incentives to protect the client's privacy without additional rewards: they have no incentive to do so. Instead, managing the complex ECH setup adds additional business continuity risks.
 
 Therefore, this section looks at organizations that could be interested in deploying ECH.
 
-Widespread use is **essential** for the success of ECH, as otherwise, the usage of ECH itself raises suspicion among censors.
+The widespread **adoption** of ECH or ECH GREASE **is crucial** for the success of ECH.
+Without it, the use of ECH itself may raise suspicions among censors.
+Current versions of Firefox and Chrome implement ECH along with ECH GREASE mode, resulting in substantial portions of TLS traffic containing ECH.
 
 ## Anti-Censor and Anti-Oppression
 
