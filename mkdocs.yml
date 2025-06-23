@@ -30,8 +30,10 @@ nav:
       - Other considerations: misc.md
   - References: references.md
 
+markdown_extensions:
+  # https://t.pxeger.com/mkdocs-material/reference/footnotes/
+  - footnotes
+
 
 theme: readthedocs
-
-
 

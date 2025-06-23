@@ -30,7 +30,8 @@ If communication between client and server only uses ECH to hide the destination
 Therefore ECH relies on the usage of DoH, DoT (DNS over TLS) or DoQ (DNS over QUIC) to hide the server's name entirely.
 
 Of the three encrypted DNS protocols, DoH is the most used, therefore we focus here on this one.
-XXX: Is DNS over QUIC equivalent?
+As DNS over QUIC isn't yet widely used on the client's side, we cannot yet foresee the consequences.
+And DoT is intended to be used as decentralized as Do53.
 
 Firefox and Edge use Coudflare's DoH server, and Chrome uses Google's DoH server.
 Just two DoH servers provide DoH services to the majority of browser users.
@@ -41,9 +42,7 @@ This imbalance implies various problem areas:
 - Jurisdiction and Geopolitics: The DoH servers are operated by companies in a single country. Their legal system can force them to share the query data at any time, impacting users **worldwide** without any possibility for them to notice.
 - Market dominance: Two companies control the majority of all DoH traffic. This creates a huge market dominance. In the future, this could lead to them effectively taking over the role of Domain registrars.
 
-XXX Feedback - 8.1.2: _important_ DoH is not required for ECH - never has been for Chrome+friends, used to be for FF, but not today (since ~6-9 months)
-
-Firefox used to require DoH for ECH XXX, but stopped doing so XXX.
+Firefox used to require DoH for ECH in Firefox 119[^1], but stopped doing so in Firefox 129[^2].
 As DoH is required for proper ECH, these problems are worsened by ECH.
 ECH aims to defend users' privacy, but its reliance on DoH may thwart this goal.
 
@@ -55,3 +54,7 @@ Access to these lists can be obstructed through packet inspection due to the une
 OCSP has recently been called into question and may be nearing obsolescence: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>. As a result, the CRLs' importance increases again.
 
 This study found no relevant interplay of ECH on CRL and OCSP mechanisms.
+
+[^1]: [Change Log of Firefox 119](https://www.mozilla.org/en-US/firefox/119.0/releasenotes/), [Mozilla Blog Post on ECH introduction](https://blog.mozilla.org/en/firefox/encrypted-hello/)
+
+[^2]: [Change Log of Firefox 129](https://www.mozilla.org/en-US/firefox/129.0/releasenotes/)
