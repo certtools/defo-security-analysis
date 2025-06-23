@@ -20,6 +20,7 @@ nav:
       - Browsers: clients/browsers.md
       - IoT and Libraries: clients/iot_and_libs.md
       - Tor: clients/tor.md
+      - Intended deactivation: clients/deactivation.md
   - Censorship and Blocking:
       - Censorship and Blocking: censorship.md
   - De-anonymization attacks: 
