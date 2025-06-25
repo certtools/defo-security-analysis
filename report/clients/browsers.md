@@ -16,7 +16,7 @@ In the past, Browsers and the CA/Browser forum have repeatedly shown that they c
 
 - Starting in 2015, Browsers gradually marked unencrypted HTTP connections as unsafe, pushing all website operators to use HTTPS.
 - Previous to 2011, certificate lifetimes of up to 10 years were allowed by standards and accepted by browsers. Since 2020, a year is the maximum allowed lifetime. Discussions on further reductions are ongoing.
-- Other examples include: Deprecation of SHA-1 (2014-2017) and Deprecation of RSA Keys (since 2010), Distrust of CAs (Symantec, 2017–2018), Mixed Content Blocking, [Requirements to CAs](https://cabforum.org/baseline-requirements/) such as Certificate Transparency, OCSP, `SubjectAltName`, Domain Validation Methods, Deprecation of Certificates for Internal Server Names (2011-2016), Deprecation of TLS protocols and cipher suites
+- Other examples include: Deprecation of SHA-1 (2014-2017) and Deprecation of RSA Keys (since 2010), Distrust of CAs (Symantec, 2017–2018), Mixed Content Blocking, Requirements to CAs[^4] such as Certificate Transparency, OCSP, `SubjectAltName`, Domain Validation Methods, Deprecation of Certificates for Internal Server Names (2011-2016), Deprecation of TLS protocols and cipher suites
 
 The reasons for this effectiveness lie in the huge market share of a small number of browsers and, on the operators' side, the high reputation risk: Website operators simply cannot afford security warnings or site breakage.
 
@@ -53,7 +53,7 @@ The Tor is reluctant on the usage of DoH for the same reason[^3].
 Online Certificate Status Protocol (OCSP) and Certificate Revocation Lists (CRL) are core components in the validation of digital WebPKI certificates. The data is typically transmitted over HTTP but verified through signing by the Certificate Authority (CA).
 Access to these lists can be obstructed through packet inspection due to the unencrypted nature of the traffic. Browsers generally employ a soft-fail approach for CRL validations by default, meaning the information about a revoked certificate may not reach the client. If an adversary has the capability to interfere at this stage, they may effectively disrupt other, more important connections as well.
 
-OCSP has recently been called into question and may be nearing obsolescence: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>. As a result, the CRLs' importance increases again.
+OCSP has recently been called into question and may be nearing obsolescence[^5]. As a result, the CRLs' importance increases again.
 
 This study found no relevant interplay of ECH on CRL and OCSP mechanisms.
 
@@ -62,3 +62,7 @@ This study found no relevant interplay of ECH on CRL and OCSP mechanisms.
 [^2]: [Change Log of Firefox 129](https://www.mozilla.org/en-US/firefox/129.0/releasenotes/)
 
 [^3]: [Tor Issue Tracker: Think about using DNS over HTTPS for Tor Browser](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753)
+
+[^4]: <https://cabforum.org/baseline-requirements/>
+
+[^5]: <https://letsencrypt.org/2022/09/07/new-life-for-crls/>

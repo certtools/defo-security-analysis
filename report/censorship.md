@@ -2,7 +2,7 @@
 
 This section provides a short overview of the regions currently use SNI for censorship purposes, those blocking ECH usage, and countries that may soon implement similar measures.
 
-For a comprehensive analysis of internet censorship practices around the globe, see [A Survey of Worldwide Censorship Techniques](https://www.ietf.org/archive/id/draft-irtf-pearg-censorship-10.html) and [Open Observatory of Network Interference](https://ooni.org/).
+For a comprehensive analysis of internet censorship practices around the globe, see A Survey of Worldwide Censorship Techniques[^1] and Open Observatory of Network Interference[^2].
 
 ## Russia
 
@@ -54,3 +54,7 @@ Several countries use unencrypted SNI for filtering and blocking websites, inclu
 Cuba, Egypt, India, Iran, Saudi Arabia, Syria, Turkey, Turkmenistan, United Arab Emirates, Vietnam
 
 Once ECH plays a relevant role, we expect that these countries block ESNI/ECH to ensure the effectiveness of their measures.
+
+
+[^1]: <https://www.ietf.org/archive/id/draft-irtf-pearg-censorship-10.html>
+[^2]: <https://ooni.org/>

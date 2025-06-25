@@ -21,7 +21,7 @@ Unencrypted SNI/Client Hello and TLS Metadata (cipher suite lists, advertised ex
 Therefore operators of malware networks have an interest in protecting their traffic and thus implementing ECH. Consequently, this will hinder - but not disable - this traffic-analysis.
 At the moment a similar effect could be gained by using different or random hosts in SNI, but that itself will form a pattern and and thus has limited effect.
 
-For example, see: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption> for a study on traffic classification not using SNI.
+For example, see: Detecting Encrypted Malware Traffic (Without Decryption)[^3] for a study on traffic classification not using SNI.
 
 Currently, the usage of ECH is very low and thus in itself suspicious. To hide their ECH traffic, malware operators may be inclined to increase the general usage of ECH.
 
@@ -31,8 +31,8 @@ Starting with February 2019, South Korea started blocking TLS-encrypted traffic 
 
 The porn industry, being blocked, has therefore a commercial interest in using ECH, which allows them to reach customers in an entire 50-million-inhabitant country.
 
-- [South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021](https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/)
-- [South Korea is Censoring the Internet by Snooping on SNI Traffic - Bleepingcomputer.com, February 13th, 2019](https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/)
+- South Korea to Extend Site Blocking by Snooping on SNI - technadu.com, August 1st, 2021[^1]
+- South Korea is Censoring the Internet by Snooping on SNI Traffic - Bleepingcomputer.com, February 13th, 2019[^2]
 
 ## CDNs
 
@@ -50,3 +50,8 @@ As mapped out in the section [Deployment considerations](../deployment/overview.
 Additionally, NRENs typically have a very decentralized infrastructure, so scaling effects won't take effect and [Separation of responsibility](../deployment/separation.md) cause additional barriers.
 
 A group of security experts and IT service operators that we inquired about was very hesitant about the potential deployment of ECH, citing the significant effort and minor benefits.
+
+[^1]: <https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/>
+[^2]: <https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/>
+
+[^3]: <https://blogs.cisco.com/security/detecting-encrypted-malware-traffic-without-decryption>

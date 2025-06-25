@@ -41,9 +41,9 @@ On the webserver side, several considerations must be addressed:
 There are similarities between the ACME protocols (made popular by the Letsencrypt initiative) and ECH, as both generate keys on the webserver and write information to the DNS zone.
 ECH adds the additional WKECH, see also [WKECH](../weaknesses/wkech.md) for possible problems related to it.
 
-To facilitate the ECH deployment, straightforward and easy tools, covering these processes, akin to ACME clients or Apache's [mod_md](https://httpd.apache.org/docs/2.4/mod/mod_md.html) need to be developed.
+To facilitate the ECH deployment, straightforward and easy tools, covering these processes, akin to ACME clients or Apache's mod_md[^1] need to be developed.
 
-Guidance on setting up webservers with ECH, can be found in the ECH Dev utilites at <https://github.com/defo-project/ech-dev-utils#user-content-server-details>
+Guidance on setting up webservers with ECH, can be found in the ECH Development utilities[^2].
 
 ## Complexity of Configuring the Zone Factory
 
@@ -60,3 +60,7 @@ It is imperative to secure the WKECH directory: it must contain only public keys
 ## DNSSEC implementation
 
 DNSSEC (Domain Name System Security Extensions) implementation enables clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
+
+
+[^1]: <https://httpd.apache.org/docs/2.4/mod/mod_md.html>**
+[^2]: <https://github.com/defo-project/ech-dev-utils#user-content-server-details>

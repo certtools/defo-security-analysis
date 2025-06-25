@@ -1,3 +1,5 @@
+# Other references
+
 - [DNS over QUIC - sidn.nl](https://www.sidn.nl/en/news-and-blogs/new-dns-over-quic-protocol-makes-encrypted-dns-traffic-faster-and-more-efficient)
 - [DNS over QUIC - nordvpn.com](https://nordvpn.com/blog/dns-over-quic/)
 - [Encrypted Client Hello (ECH) - Frequently asked questions - support.mozilla.come](https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello#w_how-do-i-enable-ech-in-firefox)

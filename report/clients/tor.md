@@ -8,7 +8,11 @@ Previously, Firefox mandated using DNS over HTTPS (DoH) for ECH functionality (s
 Contrary to DoT and DoH, Tor employs an alternative approach for Name resolution inside the Tor network[^1].
 
 There are ongoing discussions on whether and how DoH can benefit for the users' privacy and how it needs to be configured and implemented.
-For detailed information, we refer to the discussion of the Tor community on [DNS over HTTPS (DoH) in Tor](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753) and on [Encrypted ClientHello (ECH) in Tor](https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144).
-For more information on how Tor protects their users' privacy, please refer to the [Tor website](https://support.torproject.org/censorship/).
+For detailed information, we refer to the discussion of the Tor community on DNS over HTTPS (DoH) in Tor[^2] and on Encrypted ClientHello (ECH) in Tor[^3].
+For more information on how Tor protects their users' privacy, please refer to the Tor website[^4].
 
-[^1]: [Tor specifications: Remote hostname lookup](http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/remote-hostname-lookup.html), [Opening a new stream: The begin/connected handshake](http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/opening-streams.html#opening)
+
+[^1]: Tor specifications: Remote hostname lookup: <http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/remote-hostname-lookup.html>, Opening a new stream: The begin/connected handshake: <http://i3xi5qxvbrngh3g6o7czwjfxwjzigook7zxzjmgwg5b7xnjcn5hzciad.onion/tor-spec/opening-streams.html#opening>
+[^2]: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/30753>
+[^3]: <https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/42144>
+[^4]: <https://support.torproject.org/censorship/>
