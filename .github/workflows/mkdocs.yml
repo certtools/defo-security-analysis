@@ -38,7 +38,19 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: "Install build dependencies"
+      - name: "Install APT dependencies"
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/3.7.0.2/pandoc-3.7.0.2-1-amd64.deb
+          apt update
+          apt install -y ./pandoc-3.7.0.2-1-amd64.deb
+          apt install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+          tlmgr init-usertree
+          tlmgr repository add ftp://tug.org/historic/systems/texlive/2021/tlnet-final
+          tlmgr repository remove https://mirror.ctan.org/systems/texlive/tlnet
+          tlmgr option repository ftp://tug.org/historic/systems/texlive/2021/tlnet-final
+          tlmgr install sourcecodepro
+
+      - name: "Install Python dependencies"
         run: |
           pip install -r requirements.txt
 
