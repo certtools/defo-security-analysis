@@ -40,8 +40,7 @@ plugins:
       combined: true
       pandoc_template: eisvogel.latex
       combined_output_path: document.pdf
-      pandoc_extra_args: '--resource-path=report/deployment:deployment:report:. --toc --number-sections=true'
+      pandoc_extra_args: '--file-scope=true --resource-path=report/deployment:deployment:report:. --toc --number-sections=true'
   - search
 
 theme: readthedocs
-

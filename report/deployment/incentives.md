@@ -1,4 +1,4 @@
-# Deployment Incentives
+## Deployment Incentives
 
 As mentioned in the [overview](../index.md) section, we see a game-theoretic problem: most organizations that host web services might not have the proper incentives to protect the client's privacy without additional rewards: they have no incentive to do so. Instead, managing the complex ECH setup adds additional business continuity risks.
 

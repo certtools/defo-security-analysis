@@ -1,3 +1,20 @@
+---
+title: Remaining weaknesses in ECH (Encrypted Client Hello)
+author:
+  - L. Aaron Kaplan
+  - Sebastian Wagner
+date: 2025-06-25
+keywords:
+  - ECH
+  - Encrypted Client Hello
+  - Server Name Indication
+  - ESNI
+  - Security
+  - Privacy
+titlepage: "true"
+toc-own-page: "true"
+subtitle: The consequences of the adoption of ECH and its related protocols
+---
 # About this report
 
 The following security analysis tries to identify weaknesses in the ECH protocol (especially as it also interfaces with lots of other protocols).
