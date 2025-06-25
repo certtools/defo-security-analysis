@@ -4,11 +4,13 @@ There is existing theoretic extensive research on this topic.
 Traffic correlations do not depend on unencrypted SNI, so ECH will not have any effect on this.
 
 The idea is that you can still correlate a lot if you have independent datasets such as:
+
 * CTLs (Certificate Transparency Logs)
 * DNS traces (i.e. if you operate  a DoH recursor such as the large CDNs / google / quad9, DNS4EU, etc.)
 * active scanning data (which pages are hosted on which IPs?)
 * A large corpus of HTTP Host headers (not everyone is going to switch immediately to ECH)
 * Tor exit node traffic 
+
 etc.
 
 Furthermore, correlation can be done on typical patterns such as fingerprints of traffic streams of static pages.

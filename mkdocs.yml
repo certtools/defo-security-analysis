@@ -38,6 +38,8 @@ markdown_extensions:
 plugins:
   - pandoc:
       combined: true
+      pandoc_template: eisvogel.latex
+      combined_output_path: document.pdf
       pandoc_extra_args: '--resource-path=report/deployment:deployment:report:. --toc --number-sections=true'
   - search
 
