@@ -2,7 +2,13 @@
 
 ### Network separations
 
-CFS and DNS can be in separate networks with firewall rules preventing any outgoing connection from the CFS to internal networks and for the DNS server incoming connections from CFS network ranges
+The synchronization between the CFS server and the ZF can be achieved through two different methods: pulling and pushing.
+
+**Pushing**: The CFS server triggers the ZF after generating new ECH keys. For security reasons, the CFS server and the DNS server may be located on separate networks, with firewall rules preventing any outgoing connections from the CFS to internal networks. Additionally, the DNS server can block incoming connections from the CFS network range.
+
+**Pulling**: In this method, the ZF retrieves the keys from the CFS server using WKECH. The ZF must be made aware of when to refresh the keys for this approach. This can be done through high-frequency polling at the ZF.
+
+Both methods have their drawbacks, and it is up to the operator to evaluate the limitations and choose the most suitable approach.
 
 ### Process separations
 
