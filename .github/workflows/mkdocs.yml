@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Filip Pokorný (thank you!!) Adapted by aaronkaplan
+# SPDX-FileCopyrightText: 2025 Sebastian Wagner
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 name: "Build and publish documentation"
@@ -48,7 +48,7 @@ jobs:
           tlmgr repository add ftp://tug.org/historic/systems/texlive/2021/tlnet-final
           tlmgr repository remove https://mirror.ctan.org/systems/texlive/tlnet
           tlmgr option repository ftp://tug.org/historic/systems/texlive/2021/tlnet-final
-          tlmgr install sourcecodepro
+          tlmgr install sourcecodepro draftwatermark
 
       - name: "Install Python dependencies"
         run: |

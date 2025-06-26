@@ -1,3 +1,2 @@
 mkdocs
 git+https://github.com/sebix/mkdocs-pandoc-plugin.git@combined
-pandoc

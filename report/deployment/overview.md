@@ -46,8 +46,6 @@ Guidance on setting up webservers with ECH, can be found in the ECH Development 
 
 ## Complexity of Configuring the Zone Factory
 
-XXX Feedback - 6.3 bullet 3 - our ZF implementation doesn't need to know about zone files directly, it uses bind's nsupdate so only needs to know the names and value of the RRs to update, which is a bit easier, and there's no realistic chance of updating the wrong zone via ZF misconfiguration.
-
 The Zone Factory must be aware of the following:
 
 1. Identifying well-known sites (`wkech`) to monitor.
@@ -63,5 +61,5 @@ It is imperative to secure the WKECH directory: it must contain only public keys
 DNSSEC (Domain Name System Security Extensions) implementation enables clients to validate ECH-enabled domains. This not only enhances the integrity of the DNS responses but also mitigates the risk of resolvers inadvertently blocking SVCB or ECH parameters.
 
 
-[^1]: <https://httpd.apache.org/docs/2.4/mod/mod_md.html>**
+[^1]: <https://httpd.apache.org/docs/2.4/mod/mod_md.html>
 [^2]: <https://github.com/defo-project/ech-dev-utils#user-content-server-details>
