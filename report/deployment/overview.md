@@ -5,21 +5,20 @@ This section explores ECH deployment considerations. Relevant links to additiona
 ## Process Overview
 
 The following is a streamlined overview of the workflow involved when a browser accesses an ECH-protected website.
+The blue arrows signify the client-side process, while the green ones are the server-side process.
 
 
 ![WKECH flow](wkech-flow.png)
 
 ### Client-side Process
 
-<ol>
-<li style="list-style: upper-roman;">To initiate a website request, the browser first queries the A/AAAA records and the ECHConfig from the designated DoH (DNS over HTTPS) or DoT (DNS over TLS) server. This server may be provided by the network operator or a prominent Content Delivery Network (CDN).</li>
-<li style="list-style: upper-roman;">The DoH server then queries the authoritative DNS server for the required information, which is managed by the website operator.</li>
-<li style="list-style: upper-roman;">Once retrieved, the information is relayed from the authoritative DNS server to the DoH server, potentially being cached for future requests by this or other clients.</li>
-<li style="list-style: upper-roman;">The DoH server subsequently transmits the information to the client.</li>
-<li style="list-style: upper-roman;">Utilizing the A/AAAA records and the ECHConfig, the browser sends an HTTP request to the web server to fetch the website.</li>
-</ol>
+1. To initiate a website request, the browser first queries the A/AAAA records and the ECHConfig from the configured DNS server. This server may be a recursive DNS server provided by the network operator or a central DoH server.
+2. The designated DNS server then queries the authoritative DNS server for the required information, which is managed by the website operator.
+3. Once retrieved, the information is relayed from the authoritative DNS server to the DNS server, potentially being cached for future requests by this or other clients.
+4. The DNS server subsequently transmits the information to the client.
+5. Utilizing the A/AAAA records and the ECHConfig, the browser sends an HTTP request to the web server to fetch the website.
 
-Typically, DoH servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are possible.
+Typically, recursive DNS servers communicate with authoritative DNS servers using traditional unencrypted UDP-based DNS (Do53). Nonetheless, the adoption of DoT and DoH protocols is on the rise. Additionally, various protocol upgrades (either opportunistic or through SVCB records) are possible.
 
 ### Server-side Process
 
@@ -46,6 +45,8 @@ To facilitate the ECH deployment, straightforward and easy tools, covering these
 Guidance on setting up webservers with ECH, can be found in the ECH Development utilities[^2].
 
 ## Complexity of Configuring the Zone Factory
+
+XXX Feedback - 6.3 bullet 3 - our ZF implementation doesn't need to know about zone files directly, it uses bind's nsupdate so only needs to know the names and value of the RRs to update, which is a bit easier, and there's no realistic chance of updating the wrong zone via ZF misconfiguration.
 
 The Zone Factory must be aware of the following:
 

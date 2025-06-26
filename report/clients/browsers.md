@@ -6,7 +6,9 @@ The browser Firefox adopted DoH as their default setting, reverting back to Do53
 The Browsers Chrome and Edge use DoH if the system's default resolver supports it.
 Opera, Brave and Vivaldi do not use DoH by defaut.
 
-Such connection failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic. Consequently, the usage of ECH can be silently thwarted if an attacker holds sway over any part of the network path between the user and the intended target. An attacker with control over the network connection can though also block TLS and other security measures, but not without alarm bells going off in the browser and other clients.
+DoH connection failures can arise from active downgrade attacks, where malicious entities intercept and manipulate traffic.
+Consequently, the usage of ECH can be silently thwarted if an attacker holds sway the network path between the user and the intended DoH server or between recursive and autoritative DNS server.
+An attacker with control over the network connection can though also block TLS and other security measures, but not without alarm bells going off in the browser and other clients.
 
 For the implementation of ECH, attention must not only be paid to pure HTTPS traffic but also to other communication channels such as WebRTC and network proxies, as neglecting ECH on these channels can introduce ways for de-anonymization.
 

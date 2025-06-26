@@ -6,46 +6,31 @@ For a comprehensive analysis of internet censorship practices around the globe, 
 
 ## Russia
 
-Russia is know to block ECH traffic:
-
-- <https://github.com/net4people/bbs/issues/417>
-- <https://therecord.media/russia-blocks-thousands-of-websites-that-use-cloudflare-service>
-
-The government uses SNI information as a method for implementing censorship measures. Furthermore, foreign content delivery networks (CDNs) are prohibited, enforces the use of domestic service providers. This keeps the control over data transmission and access national.
+Russia is known to block traffic to Cloudflare when ECH is in use.[^3]
+The Russian government utilizes Server Name Indicator (SNI) information to enforce censorship measures.
+Additionally, the administration promotes the use of domestic service providers instead of Cloudflare and other foreign Content Delivery Networks.
+This shift aims to facilitate greater domestic control over data transmission and access.
 
 ## China
 
-The Great Firewall (GFW) of China is one of the most extensive censorship implementation in the world and reports indicate that China is blocking ESNI and ECH.
+The Great Firewall (GFW) of China is one of the most extensive censorship implementation in the world and reports indicate that China is blocking ESNI and ECH.[^4]
 
 The GFW utilizes SNI alongside other technologies enforce content blocking.
 
-Sources:
-
-- <https://gfw.report/blog/gfw_esni_blocking/en/>
-- <https://github.com/net4people/bbs/issues/43>
-
 ## South Korea
 
-South Korea uses SNI to restrict access to specific online resources.
+South Korea uses SNI to restrict access to specific online resources.[^5]
 
 While people in South Korea could previously used ESNI as a workaround to bypass these restrictions, browser updates have removed support for ESNI, complicating efforts to maintain online privacy.
 
-As laid out in [Incenctives](deployment/incentives.md), the affected industries have also commercial interest in using ECH.
+As laid out in [Incentives](deployment/incentives.md), the affected industries have also commercial interest in using ECH.
 
 It is yet unclear how South Korea's authorities will react to ECH.
 
-- <https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/>
-
-- <https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/>
-
 ## Kazakhstan
 
-Kazakhstan uses a national Certificate Authority (CA) to intercept and decrypt TLS traffic.
-In this case, ECH offers no benefit at all, as the central decyption of all traffic serves all counter-measures ineffective.
-
-Sources:
-
-- <https://censoredplanet.org/kazakhstan>
+Kazakhstan uses a national Certificate Authority (CA) to intercept and decrypt TLS traffic.[^6]
+In this case, ECH offers no benefit at all, as the central decryption of all traffic serves all counter-measures ineffective.
 
 ## Others
 
@@ -58,3 +43,11 @@ Once ECH plays a relevant role, we expect that these countries block ESNI/ECH to
 
 [^1]: <https://www.ietf.org/archive/id/draft-irtf-pearg-censorship-10.html>
 [^2]: <https://ooni.org/>
+
+[^3]: <https://github.com/net4people/bbs/issues/417> <https://therecord.media/russia-blocks-thousands-of-websites-that-use-cloudflare-service>
+
+[^4]: <https://gfw.report/blog/gfw_esni_blocking/en/> <https://github.com/net4people/bbs/issues/43>
+
+[^5]: <https://www.bleepingcomputer.com/news/security/south-korea-is-censoring-the-internet-by-snooping-on-sni-traffic/> <https://www.technadu.com/south-korea-extend-site-blocking-snooping-sni/58125/>
+
+[^6]: <https://censoredplanet.org/kazakhstan>

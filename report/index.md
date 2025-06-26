@@ -3,7 +3,7 @@ title: Remaining weaknesses in ECH (Encrypted Client Hello)
 author:
   - L. Aaron Kaplan
   - Sebastian Wagner
-date: 2025-06-25
+date: 2025-06-26
 keywords:
   - ECH
   - Encrypted Client Hello
@@ -31,6 +31,7 @@ In the DEfO project, task 9.1 deals with:
 XXX Feedback - the main "success" criteria for ECH might be worth stating, to get deployed and to be an incremental improvement (i.e. it's not a goal that all traffic to a site be ECH protected the day after deployment) - ECH is a thing that'll grow over time (or fail over time)
 XXX Feedback - there are no simple solutions available for this problem, so ECH being a complex solution is inherent - RFC8744 provides lots of background for that
 XXX Feedback - if you've time to write text: no harm to add a para or 3 about the process you followed
+XXX Feedback - I'd recommend setting the scene in the very first paragraph, e.g. saying that this report is deliberately taking an "outside" or "skeptical" view as that's a good process for finding issues.
 
 While ECH provides privacy improvements over cleartext SNI, the protocol also introduces complexity and new attack vectors primarily centered around DNS manipulation and complex deployment scenarios. The greatest risks arise from the protocol's dependency on DNS infrastructure and as well on the potential for downgrade attacks. Successful ECH deployments require close attention to
 
