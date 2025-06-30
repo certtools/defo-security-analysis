@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Sebastian Wagner
+# SPDX-FileCopyrightText: 2025 Sebastian Wagner, Aaron Kaplan
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 name: "Build and publish documentation"
