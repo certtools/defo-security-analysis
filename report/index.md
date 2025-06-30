@@ -27,6 +27,11 @@ In the DEfO project, task 9.1 deals with:
 >
 > This task will accumulate practical documentation (for deployers) and analyses covering these issues. It is clear ECH reduces metadata leakage, but it is not yet clear how censors might react. This task will audit and review the metadata in a properly functioning ECH interaction and explore remaining avenues for de-anonymisation, filtering, blocking and censorship. This touches relevant protocols required in an ECH setup, such as: DNS-over-HTTPS (DoH), DNS-over-TLS (DoT), OCSP (Online Certificate Status Protocol), certificate revocation list (CRLs), etc. We will also focus on “medium scale” web sites such as found on a University campus, smaller hosters or NREN member organisation – CDNs already see the benefits of ECH and have a clear path to deployment, but it is important to enable smaller, but still significant, scale organizations to enjoy the benefits of ECH. The task will result in one report.
 
+# Methodology
+
+The authors read the RFCs and -Drafts and brainstormed after each how we might break or downgrade the security/privacy promises. In addition, we gave a presentation on the topic in front of approx. 30 IT security professionals in order to elicit feedback and further ideas on how to attack the protocols.
+The result is this report.
+
 # How to read this report
 
 This report intentionally takes a skeptical perspective. Not in order to criticize ECH or the approach but rather to challenge the protocol authors, implementers and deployments to think about certain aspects we mention in the report.

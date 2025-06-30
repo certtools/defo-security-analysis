@@ -15,7 +15,6 @@ nav:
       - Complexity: weaknesses/complexity.md
       - DNS: weaknesses/dns.md
       - WKECH: weaknesses/wkech.md
-      - Others: weaknesses/others.md
   - Clients considerations: 
       - Browsers: clients/browsers.md
       - IoT and Libraries: clients/iot_and_libs.md
