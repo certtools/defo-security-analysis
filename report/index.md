@@ -39,7 +39,7 @@ This "skeptical"/outside view helps to ask hard questions and identify potential
 
 By releasing this report we aim to improve future versions.
 
-It is clear that - given such widely used code  and protocol stacks as with HTTP/HTTPS, changing things is very hard. ECH tries to achieve the maximum possible, given lots of constraints by the protocol landscape, implementors, etc. Hence, ECH has to live with all the legacy issues. It's probably not possible to find a quick, elegant and 100% compatible solution for the problem which ECH is trying to address.
+It is clear that - given such widely used code  and protocol stacks as with HTTP/HTTPS, changing things is very hard. ECH tries to achieve the maximum possible, given lots of constraints by the protocol landscape, implementers, etc. Hence, ECH has to live with all the legacy issues. It's probably not possible to find a quick, elegant and 100% compatible solution for the problem which ECH is trying to address.
 ECH being a complex solution is inherent - RFC8744 provides lots of background for these matters.
 
 Finally, we acknowledge that ECH is an incremental update step and we assume there will be an incremental roll-out of ECH globally. This has multiple implications:

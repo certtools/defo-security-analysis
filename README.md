@@ -4,6 +4,9 @@ Security analysis of the defo2 project + HOWTO for web admins
 
 Rendered version: https://certtools.github.io/defo-security-analysis/
 
+PDF Version: https://certtools.github.io/defo-security-analysis/document.pdf
+
+
 ## Deliverable text
 
 Deployment Scenarios Analysis:  there are many variations in how ECH can be deployed and the varying relationships between the client and server entities involved. There therefore remains a need to map out residual privacy leaks in such scenarios and how to plug those, given the existence of additional privacy mechanisms such as Qname Minimization, Oblivious DNS-over-HTTPS, and MASQUE.
@@ -40,10 +43,7 @@ cd report
 mkdocs serve
 ```
 
+or just ``make build && make serve``
+
 Note well: we publish the documentation under github pages.
 
-## Table of contents
-
-- [Overview what we are going to analyse](analysis_plan.md)
-- [Clients](Clients.md) -
-- [Weaknesses in ECH in combination with WKECH](wkech-considerations.md)
