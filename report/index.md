@@ -4,6 +4,7 @@ author:
   - L. Aaron Kaplan
   - Sebastian Wagner
 date: 2025-06-30
+version: 1.0
 keywords:
   - ECH
   - Encrypted Client Hello
@@ -14,7 +15,6 @@ keywords:
 titlepage: "true"
 toc-own-page: "true"
 subtitle: The consequences of the adoption of ECH and its related protocols
-watermark: DRAFT
 ---
 # About this report
 
