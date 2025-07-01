@@ -40,6 +40,8 @@ cd report
 mkdocs serve
 ```
 
+or just ``make build && make serve``
+
 Note well: we publish the documentation under github pages.
 
 ## Table of contents
