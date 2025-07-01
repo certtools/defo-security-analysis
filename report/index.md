@@ -14,7 +14,7 @@ keywords:
 titlepage: "true"
 toc-own-page: "true"
 subtitle: The consequences of the adoption of ECH and its related protocols
-watermark: DRAFT
+#watermark: DRAFT
 ---
 # About this report
 
