@@ -44,8 +44,3 @@ or just ``make build && make serve``
 
 Note well: we publish the documentation under github pages.
 
-## Table of contents
-
-- [Overview what we are going to analyse](analysis_plan.md)
-- [Clients](Clients.md) -
-- [Weaknesses in ECH in combination with WKECH](wkech-considerations.md)
