@@ -6,9 +6,7 @@
 
 This report analyzes the security properties of the TLS Encrypted Client Hello (ECH) protocol as specified in draft-ietf-tls-esni-24, along with its DNS service binding mechanisms (RFC 9460, draft-ietf-tls-svcb-ech-07, and draft-ietf-tls-wkech-07). The analysis identifies several attack vectors that could compromise the privacy guarantees of ECH, enable denial of service attacks, or lead to protocol downgrades.
 
-## 1. Protocol Overview and Security Goals
 
-ECH aims to encrypt the ClientHello message to prevent passive surveillance of Server Name Indication (SNI) and other ClientHello content. The protocol relies on DNS service bindings to distribute ECH configuration parameters, creating a complex attack surface spanning both DNS and TLS layers.
 
 ## 2. Critical Vulnerabilities and Attack Vectors
 
@@ -198,11 +196,6 @@ From RFC 9460:
 
 ## 4. Protocol Design Weaknesses
 
-### 4.1 DNS Dependency
-The protocol's fundamental reliance on DNS creates a large attack surface that inherits all DNS security issues.
-
-### 4.2 Complexity-Induced Vulnerabilities
-The interaction between multiple protocols (DNS, TLS, HTTP) creates opportunities for unexpected interactions and edge-case vulnerabilities.
 
 ### 4.3 Fallback Behavior
 Default fallback to cleartext SNI undermines security goals when ECH is unavailable.

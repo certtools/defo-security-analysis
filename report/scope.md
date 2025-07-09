@@ -2,7 +2,7 @@
 
 This report mainly focuses on
 
-* problems with deploying ECH and how to adress these,
+* problems with deploying ECH and how to address these,
 * sources of misconfigurations
 * implications of deploying ECH (assessing subsequent risks)
 * attacks against ECH enabled servers
